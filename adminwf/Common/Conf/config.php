@@ -5,7 +5,7 @@ return array(
     'DB_HOST'               =>  'localhost', // 服务器地址
     'DB_NAME'               =>  'txzp',          // 数据库名
     'DB_USER'               =>  'root',      // 用户名
-    'DB_PWD'                =>  'dakehui9118',          // 密码
+    'DB_PWD'                =>  '1234',          // 密码
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  'wf_',    // 数据库表前缀  
     'DB_DEBUG'  			=>  true,
@@ -14,7 +14,7 @@ return array(
 	'DEFAULT_MODULE'     => 'Home',
     //'MODULE_DENY_LIST'   => array('Common', 'User'),
     'MODULE_ALLOW_LIST'  => array('Home'),
-     'ENCRYETION_KEY'        =>'key.felixyuewux.com',
+     'ENCRYETION_KEY'        =>'key.felixyuewu.com',
 	'SMS_ON'				=>1,
     'AUTO_LOGIN_TIME'       =>time()+3600*24*7,
     'AUTH_ON'           => true,                      // 认证开关
