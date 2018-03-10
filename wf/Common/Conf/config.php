@@ -5,7 +5,7 @@ return array(
     'DB_HOST'               =>  'localhost', // 服务器地址
     'DB_NAME'               =>  'txzp',          // 数据库名
     'DB_USER'               =>  'root',      // 用户名
-    'DB_PWD'                =>  'dakehui9118',          // 密码
+    'DB_PWD'                =>  '123456',          // 密码
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  'wf_',    // 数据库表前缀  
     'DB_DEBUG'  			=>  TRUE, 
@@ -20,7 +20,7 @@ return array(
 	//'DATA_CACHE_LEVEL'=>3,//设置子目录的层次
     //'MODULE_DENY_LIST'   => array('Common', 'User'),
    // 'MODULE_ALLOW_LIST'  => array('Home','Mobile'),
-	'ENCRYPETION_KEY'=>'key.yuewux.com',
+	'ENCRYPETION_KEY'=>'key.yuewu.com',
 	'AUTO_LOGIN_TIME'=>time()+3600*24*7,
 	'IMGUPLOAD_MAX_SIZE'=>5000000,
 	'UPLOAD_PATH'=>'./public/',
