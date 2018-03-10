@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ </head>
+ <body>
+ 	<script type="text/javascript">
+
+
+
+
+$(document).ready(function() {
+ $('#tableList').bootstrapTable({
+method: 'post',
+url: "getcompapylist",
+height: $(window).height() - 200,
+striped: true,
+dataType: "json",
+pagination: true,
+"queryParamsType": "limit",
+singleSelect: false,
+contentType: "application/x-www-form-urlencoded",
+pageSize: 10,
+pageNumber:1,
+search: false, //不显示 搜索框
+showColumns: false, //不显示下拉框（选择显示的列）
+sidePagination: "server", //服务端请求
+queryParams: queryParams,
+//minimunCountColumns: 2,
+responseHandler: responseHandler,
+columns: [
+{
+field: 'CompanyId',
+
+checkbox: true
+
+},
+{
+field: 'qq',
+
+title: 'qq',
+
+width: 100,
+
+align: 'center',
+
+valign: 'middle',
+
+sortable: false
+
+}
+,
+{
+field: 'companyName',
+
+title: '姓名',
+
+width: 100,
+
+align: 'center',
+
+valign: 'middle',
+
+sortable: false
+
+}
+]
+});
+
+});
+function responseHandler(res) {
+
+
+if (res.IsOk) {
+var result = b64.decode(res.ResultValue);
+
+var resultStr = $.parseJSON(result);
+return {
+"rows": resultStr.Items,
+"total": resultStr.TotalItems
+};
+
+} else {
+return {
+"rows": [],
+"total": 0
+};
+}
+
+}
+
+//传递的参数
+
+function queryParams(params) {
+
+return {
+pageSize: params.limit,
+
+pageNumber: params.pageNumber,
+
+};
+
+}
+</script>
+
+      4   分页后,重新搜索的问题
+
+前提: 自定义搜索且有分页功能,比如搜索产品名的功能.
+
+现象:当搜索充气娃娃的时候返回100条记录,翻到第五页.  这时候搜索按摩棒,数据有200条,结果应该是第一页的记录,但是实际显示的还是第五页的结果.  也就是重新搜索后,pagenumber没有变.
+
+ 
+
+解决:重新设置option就行了.
+
+ function search(){
+
+ $('#tableList').bootstrapTable({pageNumber:1,pageSize:10});
+
+}
+ </body>
+ </html>

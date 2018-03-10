@@ -1,0 +1,5 @@
+@charset "utf-8";
+body{background:#fff !important;}
+.video_txt_h{font-size:1.5rem; font-weight:600; padding-left:0.5rem; line-height:4rem;}
+.video_txt_tit{font-size:1.3rem; font-weight:600; height:3rem; line-height:3rem;}
+.video_txt_con{font-size:1.1rem; line-height:1.8rem; padding:0.7rem 0.8rem 0;}

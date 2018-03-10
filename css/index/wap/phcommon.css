@@ -1,0 +1,183 @@
+@charset "utf-8";
+input,button,textarea{-webkit-appearance: none;outline: none;border:none;}
+.w100{width:100%;}
+.w75{width:75%;}
+.w50{width:50%;}
+.w49{width:49%;}
+.w48{width:48%;}
+
+*{margin:0; padding:0;}
+body{color:#222;font-family:'微软雅黑';-moz-user-select:none!important;}
+i,em{ font-style:normal;}
+img{border:0 none;}
+li{ list-style:none;}
+a{ text-decoration:none; color:#000;}
+a:hover{ text-decoration:none;}
+
+/*清浮动*/
+.clearfix {zoom:1;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+/*鼠标样式*/
+.pointer{cursor:pointer;}
+.notallow{cursor:not-allowed;}
+
+/*左右浮动*/
+.fl{float:left;}
+.fr{float:right;}
+
+/*文字对齐样式*/
+.talign{text-align:center;}
+.ralign{text-align:right;}
+/*文本隐藏*/
+.thidden{overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+
+/*页面主要的背景颜色*/
+.mainbg{background:#bb3333;}
+.redbg{background:#f00;}
+.baibg{background:#fff;}
+.bgf2{background:#f2f2f2;}
+.bgf3{background:#f3f3f3;}
+.bgf4{background:#f4f4f4;}
+.bgf5{background:#f5f5f5;}
+.bgf6{background:#f6f6f6;}
+.bgf9{background:#f9f9f9;}
+.bgfd{background:#fdfdfd;}
+
+
+/*页面主要的字体颜色*/
+.maincolor{color:#bb3333;}
+.colfff{color:#fff;}
+.col222{color:#222;}
+.col333{color:#333;}
+.col444{color:#444;}
+.col555{color:#555;}
+.col666{color:#666;}
+.col777{color:#777;}
+.col888{color:#888;}
+.col999{color:#999;}
+.colccc{color:#ccc;}
+.coleee{color:#eee;}
+.cole1e{color:#e1e1e1;}
+.cole2e{color:#e2e2e2;}
+.cole3e{color:#e3e3e3;}
+.cole6e{color:#e6e6e6}
+.colred{color:red;}
+.colde{color:#dedede;}
+.colddd{color:#ddd;}
+.colc0c{color:#c0c0c0;}
+.col50{color:#505050;}
+
+/*字体加粗状况*/
+.fweight6{font-weight:600;}
+.fweight1{font-weight:100;}
+/*四种常见的display*/
+.dis-non{display:none;}
+.dis-inl{display:inline;}
+.dis-blo{display:block;}
+.dis-inlblo{display:inline-block;}
+
+/*三种常见的定位*/
+.p-abs{position:absolute;}
+.p-rel{position:relative;}
+.p-fix{position:fixed;}
+
+/*空格kong*/
+.phkong02{width:100%; height:0.2rem;}
+.phkong03{width:100%; height:0.3rem;}
+.phkong04{width:100%; height:0.4rem;}
+.phkong05{width:100%; height:0.5rem;}
+.phkong06{width:100%; height:0.6rem;}
+.phkong07{width:100%; height:0.7rem;}
+.phkong08{width:100%; height:0.8rem;}
+.phkong09{width:100%; height:0.9rem;}
+.phkong10{width:100%; height:1.0rem;}
+.phkong11{width:100%; height:1.1rem;}
+.phkong12{width:100%; height:1.2rem;}
+.phkong13{width:100%; height:1.3rem;}
+.phkong14{width:100%; height:1.4rem;}
+.phkong15{width:100%; height:1.5rem;}
+.phkong16{width:100%; height:1.6rem;}
+.phkong17{width:100%; height:1.7rem;}
+.phkong18{width:100%; height:1.8rem;}
+.phkong19{width:100%; height:1.9rem;}
+.phkong20{width:100%; height:2.0rem;}
+.phkong21{width:100%; height:2.1rem;}
+.phkong22{width:100%; height:2.2rem;}
+.phkong23{width:100%; height:2.3rem;}
+.phkong24{width:100%; height:2.4rem;}
+.phkong25{width:100%; height:2.5rem;}
+.phkong26{width:100%; height:2.6rem;}
+.phkong27{width:100%; height:2.7rem;}
+.phkong28{width:100%; height:2.8rem;}
+.phkong29{width:100%; height:2.9rem;}
+.phkong30{width:100%; height:3.0rem;}
+.loaddingbg{padding-bottom:0;background: url(../img/loadding.gif) no-repeat center}
+/*预约*/
+.meng{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.45);
+	z-index: 300;
+	top:0;
+	left:0;
+}
+.order{
+	width: 80%;
+	margin:28% auto 0;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 1rem 5%;
+	border-radius:0.3rem;
+}
+.order_tit{
+	border-bottom: 0.1rem solid #e1e1e1;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	font-size: 1.6rem;
+	position: relative;
+}
+
+.order_cha{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2rem;
+	height: 2rem;
+	background: url(../img/chacha.png) no-repeat center / 1.5rem 1.5rem;
+}
+
+.order_con{
+	margin-top: 1rem;
+}
+
+.order_con input{
+	display: block;
+	width: 100%;
+	border: 0.1rem solid #e1e1e1;
+	height: 3.4rem;
+	margin-bottom: 0.8rem;
+	font-size: 1.1rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 3rem;
+	border-radius: 0.2rem;
+}
+input.order_name{
+	background: url(../img/login_name.png) no-repeat 0.5rem center / 2rem 2rem;
+}
+input.order_phone{
+	background: url(../img/yuyue_phone.png) no-repeat 0.5rem center / 2rem 2rem;
+}
+input.order_sub{
+	padding: 0;
+	font-size: 1.6rem;
+	letter-spacing: 0.2rem;
+	color: #fff;
+	border: none;
+	background: #bb3333;
+	border-radius: 0.3rem;
+}
+

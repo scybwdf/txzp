@@ -1,0 +1,31 @@
+@charset "utf-8";
+.choice {background: #fff;border: 1px solid #e5e5e5;position: relative;margin-top: 40px;}
+.choice dl:last-child dd{border-bottom:0 none;}
+.choice dt {width:120px;text-align:center; height:42px; line-height:42px;}
+.choice dd {border-bottom: 1px dashed #e6e6e6;background: #fff;margin-left: 120px; padding-bottom:10px;}
+.choice dd a {margin: 10px 5px 0; padding:0 8px; line-height: 24px; display:inline-block; height:24px;}
+.choice dd a:hover {text-decoration: underline;}
+.active{background:#bb3333; border-radius:3px; color:#fff;}
+
+/*热门内容开始*/
+.newpro-content{width:1222px;}
+/*推荐项目*/
+.newpro-tj-list{height:415px; width:385px; box-sizing:border-box; margin-top:20px; margin-right:22px; border:1px solid #e5e5e5;float:left; transition:all 0.2s linear; position:relative; border-radius:5px;}
+.newpro-tj-list:hover{box-shadow:0 15px 30px rgba(0,0,0,0.35);transform:translate3d(0px,-2px,0px);z-index:2;}
+.newpro-tj-list .proimga{padding:5px;}
+.newpro-tj-list .newpro-tj-list-img{display:block; width:375px; height:198px; border-radius:5px;}
+.newpro-tj-list .newpro-tj-list-txt{box-sizing:border-box; padding:15px 20px 0;}
+.newpro-tj-list .newpro-tj-list-txt h3{height:34px;}
+.newpro-tj-list .newpro-tj-list-txt h3 .probt{font-weight:600; width:100%; font-size:18px; display: inline-block; height:34px; line-height:22px;}
+.newpro-tj-list .newpro-tj-list-txt h3 a:hover{color:#bb3333;}
+.newpro-tj-list .newpro-tj-list-txt .newpro-tj-list-bq{padding-bottom:10px; padding-top:5px; border-bottom:1px dashed #e6e6e6;}
+.newpro-tj-list .newpro-tj-list-txt .newpro-tj-list-bq em{display:inline-block;height:22px; line-height:22px; padding:0px 10px; background:#bb3333; color:#fff; cursor:pointer;}
+.newpro-tj-list .newpro-tj-list-txt .newpro-tj-list-bq span{padding-left:2px; font-size:14px;}
+.newpro-tj-list .newpro-tj-list-txt .newpro-tj-list-bq span:hover{color:#2d559b; cursor:pointer;}
+.newpro-tj-list .newpro-tj-list-txt .newpro-tj-list-jj{line-height:22px; font-size:14px; color:#666; padding-top:10px;}
+.newpro-tj-list .newpro-tj-bottom{width:375px; height:48px; background:#f9f9f9; position:absolute; bottom:5px; left:5px; border-radius:5px;}
+.newpro-tj-list .newpro-tj-bottom .newpro-tj-bottom-code{width:160px; height:48px; line-height:48px; font-size:14px; padding-left:15px; float:left;}
+.newpro-tj-list .newpro-tj-bottom .newpro-tj-playing{ width:90px; height:28px; text-align:center; background:#2d559b; float:right; line-height:28px; margin-top:10px; color:#fff; font-size:14px; margin-right:15px;}
+.page{text-align: center;color:#222;}
+.page a,.page span{color:#222;padding:0px 10px;border: 1px solid #eee;margin-left: -1px;}
+.page span{cursor:not-allowed;color: #fff !important;background: #bb3333;}

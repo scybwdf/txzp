@@ -1,0 +1,51 @@
+<include file="Public:header" />
+	<section class="w100">
+		<div class="artin_top w100">
+			<img class="dis-blo" width="100%" src="{$article.icon|imgqudian=###}" alt="">
+			<div class="artin_top_tit">{$article.title}</div>
+		</div>
+		<div class="artin_con_top w100">
+			<div class="artin_come clearfix">
+				<span class="fl">来源：{$article.writer}</span>
+				<em class="fl">{$article.update_time|date='Y-m-d',###}</em>
+				<i class="fr">{$article.readrow}</i>
+			</div>
+			<div class="artin_bq_out">
+				<ul class="artin_bq clearfix">
+					<foreach name="article['tags']" item="tags_item" >
+					<li>{$tags_item}</li>
+					</foreach>
+				</ul>
+			</div>
+			<div class="artin_des">
+				{$article.brief}
+			</div>
+		</div>
+		<div class="artin_con_txt w100">
+			{$article.content|htmlspecialchars_decode=###}
+		</div>
+		<div class="artin_con_kuang">
+			免责声明：本文（报告）是基于公开的信息资料或受访者提供的信息撰写，但投资达客不保证该等信息资料的完整性和准确性。在任何情况下，本文（报告）中的信息或所表述的意见均不构成对任何人的投资建议。
+		</div>
+		<div class="artin_tj_tit">相关推荐</div>
+		<ul class="art w100">
+		<foreach name="insidetj" item="insidetj_item">
+			<li class="clearfix">
+			<a href="{:U('Article/inside',array('id'=>$insidetj_item['id']))}">
+				<img class="fl" src="{$insidetj_item.icon|imgqudian=###}" width="35%" alt="">
+				<div class="art_list_right fr">
+					<div class="art_list_tit">{$insidetj_item.title|msubstr=###,0,30}</div>
+					<div class="art_list_des clearfix">
+					<foreach name="insidetj['tags_arr']" item="tjtag_item" >
+						<span class="fl">{$tjtag_item}</span>
+					</foreach>	
+						<em class="fl">{$insidetj_item.update_time|date='Y-m-d',###}</em>
+					</div>
+				</div>
+			</a>	
+			</li>
+		</foreach>	
+		</ul>
+		<div class="phkong10"></div>
+	</section>
+<include file="Public:footer" />

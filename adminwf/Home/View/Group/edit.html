@@ -1,0 +1,77 @@
+<include file="Common:header" />
+<script src="__ROOT__/js/admin/admin.js"></script>
+<div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5 class="text-primary text-center"  >编辑管理组</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#">管理组列表</a>
+                        </li>
+                        <li><a href="#"></a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+            <div class="row row-lg">
+   			 <div class="col-sm-12">
+        <!-- Example Events -->
+        	<div class="example-wrap">
+           
+            <div class="example">
+             <form name="addgroup">
+                <div class="input-group col-xs-12 col-sm-4 col-lg-3">
+           		 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+           		 管理组名称:</span>
+           		  <input type="text" class="form-control" name="title" value="{$v.title}" >
+        		</div>
+                <table class="table table-bordered text-center" >
+                    <thead>
+                        <tr >
+                           	<th class="text-center checkall" >
+                           		<input type="checkbox" class="i-checks">
+                           	</th>
+                            <th class="text-center" >编号</th>
+                            <th class="text-center" >权限</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <foreach name="list" item="lv" key="k">
+                            <tr style="text-align:center" >
+                                <td class="bs-checkbox checklist ">
+                                <input type="checkbox" class="i-checks" name="rules" 
+									   <foreach name="v['newrules']" item="rule">
+									   	<if condition="$lv['id'] eq $rule">checked="checked"</if>
+									   </foreach>
+                                 value="{$lv.id}">    
+                                </td>
+                                <td>
+                                    {$lv.id}
+                                </td>
+								<td>{$lv.title}</td>
+                            </tr>
+                        </foreach>
+                    </tbody>
+                </table>
+                	<input type="hidden" name="id" value="{$v.id}">
+                 	<button type="submit" style="text-shadow: black 5px 3px 3px;" class="btn btn-lg col-sm-offset-4 col-sm-2  btn-primary">编辑</button>
+                 	
+              </form>
+            </div>
+        </div>
+        </div>
+        <!-- End Example Events -->
+    </div>
+	</div>
+</div>
+
+<include file="Common:footer" />

@@ -1,0 +1,7 @@
+ <foreach name="cont" item="cont_item" >
+  <li class="neeqWikiConRightList w100 p-rel">
+               <h3 class="fweight1"><a class="dis-blo" href="{:U('Article/inside',array('id'=>$cont_item['id']))}">{$cont_item.title}</a></h3>
+                  <p class="f14 col666 line26">{$cont_item.brief|msubstr=###,0,150}</p>
+    <a href="{:U('Article/inside',array('id'=>$cont_item['id']))}" class="neeqWikiConRightListGI dis-blo colfff f12 p-abs">阅读</a>
+</li>
+</foreach>

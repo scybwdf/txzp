@@ -1,0 +1,29 @@
+	<div class="newpro-content clearfix">
+           <foreach name="deal_list" item="deal_item">
+            <div class="newpro-tj-list">
+                <a class="proimga" href="{:U('deal/inside',array('id'=>$deal_item['id']))}" style="display:block;">
+                    <img class="newpro-tj-list-img" src="{$deal_item.image|imgqudian=###}" alt="" width="375" height="198">
+                </a>
+                <div class="newpro-tj-list-txt">
+                    <h3><a class="probt" href="{:U('deal/inside',array('id'=>$deal_item['id']))}">{$deal_item.business_name}</a></h3>
+                    <div class="newpro-tj-list-bq">
+                        <em>标签</em>
+                        <span>{$deal_item.tags}</span>
+                    </div>
+                    <p class="newpro-tj-list-jj">
+                       {$deal_item.business_descripe|msubstr=###,0,40}
+                    </p>
+                </div>
+                <div class="newpro-tj-bottom">
+                    <div class="newpro-tj-bottom-code">
+                        ●&nbsp;项目代码：<span class="newpro-tj-bottom-code-con">{$deal_item.daima}</span>
+                    </div>
+                    <div class="newpro-tj-playing">
+                        正在进行中
+                    </div>
+                </div>
+            </div>
+           </foreach>
+        </div>
+        <div class="kong50"></div>
+		<div class="page">{$pages}</div>

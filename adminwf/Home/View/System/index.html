@@ -1,0 +1,82 @@
+<tagLib name="html" />
+<include file = "Common:header" title = "{$title}" />
+<script src="__ROOT__/js/admin/admin.js"></script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>系统设置</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal" role="form" action="{:U('System/edit')}" method="post">
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">网站名称:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="webname" type="text" value="{$config.WEBNAME}" >
+                  		</div>
+                  	</div>
+                  	 	<div class="form-group">
+                  		<label class="control-label col-sm-3">网站logo:</label>
+                  		<div class="col-sm-5">
+                  			<html:imgUpload id="logoimg" name="logoimg" value='$config.LOGOIMG' ></html:imgUpload>
+                  		</div>
+                  	</div>
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">SEO标题::</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="seo_title" type="text" value="{$config.SEO_TITLE}" >
+                  		</div>
+                  	</div>
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">SEO关键词:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="seo_keywords" type="text" value="{$config.SEO_KEYWORDS}" >
+                  		</div>
+                  	</div>
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">SEO描述:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="seo_brief" type="text" value="{$config.SEO_BRIEF}" >
+                  		</div>
+                  	</div>
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">站点版权:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="copy" type="text" value="{$config.COPY}" >
+                  		</div>
+                  	</div>
+                  		<div class="form-group">
+                  		<label class="control-label col-sm-3">网络备案信息:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="icp" type="text" value="{$config.ICP}" >
+                  		</div>
+                  	</div>
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">统计代码:</label>
+                  		<div class="col-sm-5">
+                  			<textarea class="form-control" name="totaldata" >{$config.TOTALDATA}</textarea>
+                  		</div>
+                  	</div>
+                  	<div class="form-group">
+                  		<div class="col-sm-offset-4 col-xs-offset-2 fl">
+                  			<button class="btn btn-primary" type="submit">编辑</button>
+                  		</div>
+                  		<div class="col-sm-2 col-xs-2">
+                  			<button class="btn btn-primary" type="reset">重置</button>
+                  		</div>
+                  	</div>
+                </form> 
+        </div>
+    </div>
+</div>
+</div>
+<!-- 调用脚部文件 -->
+<include file = "Common:footer"  />

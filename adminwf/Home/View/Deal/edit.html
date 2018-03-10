@@ -1,0 +1,225 @@
+<tagLib name="html" />
+<include file="Common:header" />
+<script src="__ROOT__/js/admin/admin.js"></script>
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5 class="text-primary text-center">编辑新三板项目</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                 <li><a href="{:U('add')}">新增项目</a>
+                </li>
+                <li><a href="{:U('index')}">项目列表</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row row-lg">
+            <div class="col-xs-12">
+                <form  class="form-horizontal" method="post" action="{:U('edit')}">
+                    <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">项目名称：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="name" required="" placeholder="" value="{$vo.name}">
+                        </div>
+                    </div>
+                      <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">企业全称：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="business_name" required="" placeholder="" value="{$vo.business_name}">
+                        </div>
+                    </div>
+                       <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">项目简称：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="jianname" required="" placeholder="" value="{$vo.jianname}">
+                        </div>
+                    </div>
+                       <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">简介：</label>
+                         <div class="col-sm-6">
+                       		 <textarea name="business_descripe" rows="5" class="form-control">{$vo.business_descripe}</textarea>
+						</div>
+                    </div>
+              		 <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">发布人：</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="writer" value="{:session('auth')['username']}" required="" placeholder="">
+                        </div>
+                    </div>
+                     <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">项目图片：</label>
+                        <div class="col-sm-6">
+                             <html:imgUpload id="image" name="image" value='$vo.image'></html:imgUpload>
+                        </div>
+                    </div>
+                      <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">手机端项目图片：</label>
+                        <div class="col-sm-6">
+                             <html:imgUpload id="mobile_img" name="mobile_img" value='$vo.mobile_img'></html:imgUpload>
+                        </div>
+                    </div>
+                      <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">热门项目图片：</label>
+                        <div class="col-sm-6">
+                             <html:imgUpload id="hot_image" name="hot_image" value='$vo.hot_image'></html:imgUpload>
+                        </div>
+                        <span class="text-info">最佳尺寸555*320px</span>
+                    </div>
+                       <div class="form-group col-sm-12">
+            		  <label class="control-label col-sm-3">手机端内页图片：</label>
+            		  <div class="col-sm-6">
+          	 				<html:editor id="mobile_inside" name="mobile_inside" style="width:100%;height:100%" type="KINDEDITOR" content="{$vo.mobile_inside}" ></html:editor>
+					  </div>	
+        			</div>
+                        <div class="form-group col-sm-12">
+            		  <label class="control-label col-sm-3">电脑端精选专题内页：</label>
+            		  <div class="col-sm-6">
+          	 				<html:editor id="pczhuanti" name="pczhuanti" style="width:100%;height:100%" type="KINDEDITOR" content="{$vo.pczhuanti}" ></html:editor>
+					  </div>	
+        			</div>
+                       <div class="form-group col-sm-12">
+            		  <label class="control-label col-sm-3">手机端精选专题内页：</label>
+            		  <div class="col-sm-6">
+          	 				<html:editor id="wapzhuanti" name="wapzhuanti" style="width:100%;height:100%" type="KINDEDITOR" content="{$vo.wapzhuanti}" ></html:editor>
+					  </div>	
+        			</div>
+                       <div class="form-group col-sm-12">
+            		  <label class="control-label col-sm-3">目标用户或客户群体定位：</label>
+            		  <div class="col-sm-6">
+          	 				<html:editor id="description_2" name="description_2" style="width:100%;height:100%" content="{$vo.description_2}" type="KINDEDITOR" ></html:editor>
+					  </div>	
+        			</div>
+                 	<div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">项目所属地区：</label>
+                        <div class="col-sm-1">
+                           <input type="text" class="form-control" name="province" placeholder="所属省份" value="{$vo.province}">
+                            <span class="text-info">如：浙江</span>
+                        </div>
+                         <div class="col-sm-1">
+                          
+                            <input type="text" class="form-control" name="city"  placeholder="所属市" value="{$vo.city}">
+                             <span class="text-info">如：嘉兴</span>
+                        </div>
+                    </div>
+                      <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">项目代码：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="daima" placeholder="" value="{$vo.daima}">
+                        </div>
+                    </div>
+                   	 <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">标签：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="tags" required="" placeholder="" value="{$vo.tags}">
+                        </div>
+                    </div>
+                          	 <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">法人代表：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="frdaibiao" value="{$vo.frdaibiao}"  placeholder="">
+                        </div>
+                    </div>
+                       <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">证券代码：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="zqdaima" value="{$vo.zqdaima}"  placeholder="">
+                        </div>
+                    </div>
+                       <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">总股本：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="guben" value="{$vo.guben}" placeholder="">
+                        </div>
+                    </div>
+                       <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">分层方案：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="fcfangan" value="{$vo.fcfangan}" placeholder="">
+                        </div>
+                    </div>
+                       <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">转让方式：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="zrfangshi" value="{$vo.zrfangshi}" placeholder="">
+                        </div>
+                    </div>
+                          <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">辅导券商：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="fdquanshang" value="{$vo.fdquanshang}" placeholder="">
+                        </div>
+                    </div>
+                        <div class="form-group col-sm-12">
+            		  <label class="control-label col-sm-3">项目亮点描述：</label>
+            		  <div class="col-sm-6">
+          	 				<html:editor id="item_good" name="item_good" style="width:100%;height:100%" type="KINDEDITOR" content="{$vo.item_good}" ></html:editor>
+					  </div>	
+        			</div>
+                      	 <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">视频unique：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="vedio" value="{$vo.vedio}"  placeholder="">
+                        </div>
+                    </div>
+                       <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">热门项目：</label>
+                        <div class="col-sm-1">
+                           是&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_hot" <if condition="$vo['is_hot'] eq 1">checked="checked"</if> value="1">
+                        </div>
+                         <div class="col-sm-1">
+                           否&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_hot" <if condition="$vo['is_hot'] eq 0">checked="checked"</if>  value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">推荐项目：</label>
+                        <div class="col-sm-1">
+                           是&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_recommend" value="1" <if condition="$vo['is_recommend'] eq 1">checked="checked"</if> >
+                        </div>
+                         <div class="col-sm-1">
+                           否&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_recommend" <if condition="$vo['is_recommend'] eq 0">checked="checked"</if>  value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">是否为话题：</label>
+                        <div class="col-sm-1">
+                           是&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_huati" value="1" <if condition="$vo['is_huati'] eq 1">checked="checked"</if> >
+                        </div>
+                         <div class="col-sm-1">
+                           否&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_huati" <if condition="$vo['is_huati'] eq 0">checked="checked"</if>  value="0">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">是否有效：</label>
+                        <div class="col-sm-1">
+                           有效&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_effect" <if condition="$vo['is_effect'] eq 1">checked="checked"</if> value="1">
+                        </div>
+                         <div class="col-sm-1">
+                           无效&nbsp;&nbsp;<input class="i-checks" type="radio" <if condition="$vo['is_effect'] eq 0">checked="checked"</if> name="is_effect" value="0">
+                        </div>
+                    </div>
+                     <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">排序：</label>
+                        <div class="col-sm-1">
+                            <input type="text" class="form-control" name="sort" value="{$vo.sort}" required="" placeholder="">
+                        </div>
+                    </div>
+					<div class="col-sm-6 col-sm-offset-5 col-xs-4 col-xs-offset-4 ">
+						<input type="hidden" name="id" value="{$vo.id}">
+						<button style="text-shadow: black 5px 3px 3px;" class="btn btn-primary" type="submit">编辑</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Common:footer" />

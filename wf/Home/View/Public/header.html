@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--403 Forbidden-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="{:C('system')['SEO_KEYWORDS']}" />
+	<meta name="description" content="{:C('system')['SEO_BRIEF']}" />
+	<title><if condition="$page_title neq ''">{$page_title}_</if>{:C('system')['SEO_TITLE']}</title>
+	<?php 
+   		$pagecss[]= WEB_ROOT."/css/index/pc/common.css";
+   		$pagecss[]= WEB_ROOT."/css/index/pc/header.css";
+   		$pagecss[]= WEB_ROOT."/css/index/pc/footer.css";
+   		$pagecss[]= WEB_ROOT."/css/index/pc/xieyi.css";
+   		$pagecss[]= WEB_ROOT."/css/common/flavr.css";
+   		$spagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/pc/ajaxlogin.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/ajaxlogin.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/pc/jquery.validate.min.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/jquery.validate.min.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/pc/messages_zh.min.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/messages_zh.min.js";
+  	 	$pagejs[]=WEB_ROOT."/js/index/pc/action.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/pc/action.js";
+  	 	$spagejs[]=WEB_ROOT."/js/common/flavr.min.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/common/flavr.min.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/pc/login.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/login.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/pc/order.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/order.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/pc/SuperSlide.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/SuperSlide.js";
+  	 	$pagejs[]=WEB_ROOT."/js/index/pc/footer.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/pc/footer.js";
+   		if(CONTROLLER_NAME."/".ACTION_NAME=='Index/index'){
+   		$pagecss[]= WEB_ROOT."/css/index/pc/index.css";
+   		}
+   		if(CONTROLLER_NAME=='Baike'){
+   		$pagecss[]= WEB_ROOT."/css/index/pc/baike.css";
+   		$pagejs[]=WEB_ROOT."/js/index/pc/baike.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/pc/baike.js";
+   		}
+   		if(CONTROLLER_NAME=='Article'){
+   		$pagecss[]= WEB_ROOT."/css/index/pc/article.css";
+   		$pagecss[]= WEB_ROOT."/css/index/pc/articlein.css";
+   		$pagejs[]=WEB_ROOT."/js/index/pc/article.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/pc/article.js";
+   		}
+   		if(CONTROLLER_NAME=='Luyan'){
+   		$pagecss[]= WEB_ROOT."/css/index/pc/luyanin.css";
+   		$pagecss[]= WEB_ROOT."/css/index/pc/luyan.css";
+   		}
+   		if(CONTROLLER_NAME=='Deal'){
+   		$pagecss[]= WEB_ROOT."/css/index/pc/deal.css";
+   		$pagecss[]= WEB_ROOT."/css/index/pc/qaneeq.css";
+   		$pagejs[]=WEB_ROOT."/js/index/pc/deal.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/pc/deal.js";
+   		}
+   		if(CONTROLLER_NAME."/".ACTION_NAME=='Deal/inside'){
+   		$pagecss[]= WEB_ROOT."/css/index/pc/deal_in.css";
+   		$spagejs[]="https://yuntv.letv.com/player/vod/bcloud.js";
+   		$scpagejs[]="https://yuntv.letv.com/player/vod/bcloud.js";
+   		}
+   		if(CONTROLLER_NAME=='Zhuanti'){
+   		$pagecss[]= WEB_ROOT."/css/index/pc/zhuanti.css";
+   		$spagejs[]=WEB_ROOT."/js/index/pc/zhuanti.js";
+   		$scpagejs[]=WEB_ROOT."/js/index/pc/zhuanti.js";
+   		}
+   	 ?>
+   	 <script>
+		 	var dealurl="{:U('deal/index')}";
+		 	var dealzb="{:U('deal/getzbanlie')}";
+		 	var loginout="{:U('Login/loginout')}";
+		 	var do_regurl="{:U('Login/do_register')}";
+		 	var do_logurl="{:U('Login/do_login')}";
+		 	var vercodeurl="{:U('Login/get_msgcode')}";
+			var checkcode="{:U('Login/checkcode')}";
+		 	var checkmo="{:U('Login/checkmo')}";
+		 	var getbklist="{:U('Baike/getlist')}";
+		 	var getbkcont="{:U('Baike/getcont')}";
+		 	var yuyueurl="{:U('Ajax/yuyue')}";
+	</script>
+    <link charset="utf-8" type="text/css" href="{:parse_css($pagecss,pc)}" rel="stylesheet">
+     <script charset="utf-8" crossorigin="anonymous" type="text/javascript" src="{:parse_script($spagejs,$scpagejs,pc)}"></script>
+</head> 
+<!--<script>document.oncontextmenu=function(e){return false;}</script>-->
+<body onselectstart="return false">
+<!--header begin-->
+	<div class="header_item wfull" style="background:url(__ROOT__/img/pc/header_item.png) no-repeat center center;">
+        <div class="w1200 clearfix">
+            <a href="##" class="fl" style="width:880px;height:90px;"></a>
+            <a href="##" class="fl" style="width:320px;height:90px;"></a>
+        </div>
+    </div>
+    <header class="headertopbg wfull">
+    	<div class="headertop w1200 p-rel line35 f14">
+    		<div class="headertop-left line35  fl">
+    			<if condition="$_SESSION['pcuser'] neq ''">
+    				<span >您好,&nbsp;{:session('pcuser')}</span>
+    				<span onClick="$.logout()">退出登录</span>
+    			<else />
+    			<span onClick="$.login()" >您好,&nbsp;请登录</span>
+    			<span onClick="$.reg()">免费注册</span>
+    			</if>
+    			<span>:</span>
+    			<span class="maincolor">touzidake@126.com</span>
+    		</div>
+    		<div class="headertop-right fr">
+    			<a href="/about">关于我们</a>
+    			<i></i>
+    			<i></i>
+    			<a href="##">新三板开户</a>
+    		</div>
+    	</div>	
+    </header>
+    <nav class="nav w1200 clearfix">
+		<h1 class="logo"><img class="dis-blo" src="{:C('system')['LOGOIMG']}" alt=""></h1>
+		<div class="nav_con">
+			<ul class="clearfix"> 
+			<foreach name="nav_list" item="nav_item">
+				<li class="nav_list <if condition="($nav_item['u_module'] eq CONTROLLER_NAME)" >nav_active</if> "><a href="{$nav_item.url}" <if condition="$nav_item['blank'] eq 1" > target="_blank"</if>>{$nav_item.name}</a></li>
+			</foreach>
+			</ul>
+			<div class="heng"></div>
+		</div>
+    </nav>
+    
+<!--header end-->
+<!--banner begin-->
+   <if condition="$banner_list neq ''">
+    <section id="banner" class="banner">
+    	<div class="hd">
+			<ul>
+				<foreach name="banner_list" item="banner_img_item2">
+				<li></li>
+				</foreach>	
+			</ul>
+		</div>
+		<div class="bd">
+			<ul>
+			<foreach name="banner_list" item="banner_img_item">
+				<li style="background:url({$banner_img_item.image}) no-repeat center;"><a style="height:inherit" class="dis-blo" href="{$banner_img_item.url}" target="_blank"></a></li>
+			</foreach>	
+			</ul>
+		</div>
+		<a class="prev banner_prev" href="javascript:void(0)">&lt;</a>
+		<a class="next banner_next" href="javascript:void(0)">&gt;</a>
+    </section>
+    </if>
+<!--banner end-->

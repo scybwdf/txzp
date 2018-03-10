@@ -1,0 +1,23 @@
+<include file="Public:header" />
+<section class="nimabi_video">
+	<ul class="videoin">
+	<foreach name="videolis" item="videolis_item" >
+		<li class="video_list">
+			<a href="{:U('Video/inside',array('id'=>$videolis_item['id']))}" class="video_name dis-blo">
+		
+				<div class="video_title">{$videolis_item.name|msubstr=###,0,30}</div>
+
+				<div class="video_look_time clearfix">
+					<em class="video_look">{$videolis_item.readrow}</em>
+					<span class="video_time">{$videolis_item.update_time|date='Y-m-d',###}</span>
+				</div>
+
+			</a>
+			<a href="{:U('Video/inside',array('id'=>$videolis_item['id']))}" class="nimabi_video_top p-rel dis-blo">
+				<img class="dis-blo" src="{$videolis_item.img}" width="100%" alt="">
+			</a>
+		</li>
+	</foreach>	
+	</ul>
+</section>
+<include file="Public:footer" />

@@ -1,0 +1,39 @@
+<include file="Common:header" title="留言内容" />
+<div id="page-wrapper">
+   <include file="Common:sidebar" />
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+               <th>
+                  <input type="checkbox" id="allcheck">
+                </th>
+                <th>编号</th>
+                <th>留言内容</th>
+                 <th>留言时间</th>
+                 <th>地区</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        <foreach name="list" item="v">
+            <tr>
+                <td>
+                  <input type="checkbox" class="wfkey" value="{$v.id}">
+                </td>
+                <td>{$v.id}</td>
+                <td>{$v.content}</td>
+                 <td>{$v.time|date="Y/m/d H:i:s",###}</td>
+                 <td>{$v.area}</td>
+                <td><a style="cursor:pointer;color:red;" onclick="javascript:wfdel({$v.id},this)">删除</a></td>
+            </tr>
+        </foreach>
+        </tbody>
+    </table>
+    <div class="clearfix"></div>
+      <div class="pages">
+          {$show}
+      </div>
+</div>
+<script>
+</script>
+<include file="Common:footer"/>

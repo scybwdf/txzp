@@ -1,0 +1,69 @@
+<include file="Public:header" />
+<script>
+var getdeal="{:U('Deal/getdeal')}";
+var dealurl="{:U('Deal/index')}";
+var pagenum=1;	
+</script>
+	<div class="phkong03"></div>
+<!--搜索 begin-->
+	<section class="search">
+		<form name="xsbsearch">
+			<input class="ser_txt" name="key" type="text" placeholder="请输入搜索关键词">
+			<input class="ser_btn" type="submit" value="搜索">
+		</form>
+	</section>
+<!--搜索 end-->
+	<div class="phkong03"></div>
+<!--分类筛选 begin-->
+	<section class="w100 clearfix phCho">
+		<ul class="p-rel w100 clearfix dealcho">
+			<li class="phCho_item">
+				<a href="{:U('Deal/index')}" class="phCho_item_tit">全部</a>
+			</li>
+			<li class="phCho_item phCho_itembottom">
+				<a href="javascript:void(0)" class="phCho_item_tit">所属行业</a>
+				<ol class="clearfix phCho_item_list p-abs dis-non">
+				<li class="phCho_item_list_con dealtag "><a class="phCho_item_list_tit actives">全部</a></li>
+				<foreach name="tagslist" item="tagslist_item">
+				
+					<li class="phCho_item_list_con dealtag "><a class="phCho_item_list_tit">{$tagslist_item}</a></li>
+				</foreach>	
+				</ol>
+			</li>
+			<li class="phCho_item phCho_itembottom">
+				<a href="javascript:void(0)" class="phCho_item_tit">所属区域</a>
+				<ol class="clearfix phCho_item_list p-abs dis-non">
+					<li class="phCho_item_list_con dealarea"><a class="actives phCho_item_list_tit">全部</a></li>
+				<foreach name="arealist" item="arealist_item">
+					<li class="phCho_item_list_con dealarea"><a class="phCho_item_list_tit">{$arealist_item}</a></li>
+				</foreach>	
+				</ol>
+			</li>
+		</ul>
+		
+	</section>
+<!--分类筛选 end-->
+	<div class="phkong05"></div>
+<!--项目 begin-->
+	<section class="item w100">
+		<ul class="item_con ajaxcontent">
+		<foreach name="deal_list" item="deal_list_item">
+			<li class="item_list">
+				<a class="dis-blo" href="{:U('Deal/inside',array('id'=>$deal_list_item['id']))}">
+					<img class="dis-blo" src="{$deal_list_item.mobile_img}" width="100%" alt="">
+					<div class="item_tit">
+						<div class="item_tit_left thidden">{$deal_list_item.business_name}</div>
+						<div class="item_tit_right" style="float:left;">{$deal_list_item.tags}</div>
+						<div class="item_des_right">{$deal_list_item.province}</div>
+					</div>
+					<div class="item_order phyuyue">预约咨询</div>
+				</a>
+			</li>
+		</foreach>	
+		</ul>
+		<input class="astep" type="hidden" value="{$step}">
+		<section class="phkong24 loaddingbg dis-non"></section>
+		<section class="phkong24 loadmore talign dis-non" style="color:#222; font-size:1rem; line-height:1.4rem;">没有更多了</section>
+	</section>
+<!--项目 end-->
+<include file="Public:footer" />

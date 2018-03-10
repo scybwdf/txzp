@@ -1,0 +1,138 @@
+<include file="Public:header" />
+<div class="kong50"></div>
+<!--热门项目 begin-->
+    <div class="title w1200">
+    	<em>热门项目</em>
+    	<i>近期千次实地考察只为您满意</i>
+    </div>
+    <div class="kong30"></div>
+    <div class="box">
+		<div class="list">
+			<ul class="clearfix">
+			<foreach name="xsb_hot" item="hot_item" key="hot_key">
+				<li class="pp p{$hot_key+1}">
+					<a href="{:U('deal/inside',array('id'=>$hot_item['id']))}">
+						<img src="{$hot_item.hot_image}" alt="" />
+						<div class="pmeng">
+							{$hot_item.business_descripe|msubstr=###,0,200}
+							<div class="pmeng_look">了解更多&gt;</div>
+						</div>
+					</a>
+				</li>	
+			</foreach>
+			</ul>
+		</div>
+
+		<a href="javascript:" class="boxprev btn">&lt;</a>
+		<a href="javascript:;" class="boxnext btn">&gt;</a>
+
+<!--
+		<div class="buttons">
+			<a href="javascript:;"><span class="blue"></span></a>
+			<a href="javascript:;"><span></span></a>
+			<a href="javascript:;"><span></span></a>
+			<a href="javascript:;"><span></span></a>
+
+		</div>
+-->
+	</div>
+<!--热门项目 end-->
+<div class="kong50"></div>
+<!--精选项目 begin-->
+	<div class="title w1200">
+    	<em>精选项目</em>
+    	<i></i>
+    	<a href="{:U('deal/index')}">全部项目&gt;&gt;</a>
+    </div>
+    
+    <section class="jx w1200">
+    	<ul class="clearfix">
+    	<foreach name="xsb_tuijian" item="tuijian_item">
+    		<li class="jx_list">
+    			<a class="dis-blo" href="{:U('Deal/inside',array('id'=>$tuijian_item['id']))}">
+    				<div class="jx_list_top">
+    					<img class="dis-blo" src="{$tuijian_item.image}" width="294" height="166" alt="">
+    					<div class="jx_list_top_txt">
+    						<span>{$tuijian_item.jianname}</span>
+    						<em>{$tuijian_item.readrow}</em>
+    					</div>
+    				</div>
+    				<div class="jx_list_bottom">
+    					<span>{$tuijian_item.tags}</span>
+    					<div class="jx_list_bottom_bq">
+    						<i>项目代码:{$tuijian_item.daima}</i>
+    					</div>
+    				</div>
+    			</a>
+    		</li>
+    	</foreach>	
+    	</ul>
+    </section>
+<!--精选项目 end-->
+<div class="kong40"></div>
+	<section class="w1200"><img class="dis-blo" src="__ROOT__/img/pc/aside_fu.jpg" alt=""></section>
+<div class="kong40"></div>
+<!--三板头条百科 begin-->
+	<section class="xsb w1200 clearfix">
+		<div class="xsb_tt fl">
+			<div class="title w100">
+				<em>三板头条</em>
+				<i></i>
+				<a href="{:U('article/index')}">更多&gt;&gt;</a>
+			</div>
+			<div class="kong30"></div>
+			<ul class="xsb_tt_con">
+			<foreach name="zx_top" item="zxtop_item">
+				<li>
+					<a href="{:U('article/inside',array('id'=>$zxtop_item['id']))}" class="dis-blo clearfix">
+						<img src="{$zxtop_item.icon}" class="dis-blo fl" width="258" alt="">
+						<div class="xsb_tt_con_con fl">
+							<h3>{$zxtop_item.title|msubstr=###,0,30}</h3>
+							<p>{$zxtop_item.brief|msubstr=###,0,80}</p>
+							<div class="xsb_tt_con_con_bot clearfix">
+								<div class="xsb_tt_con_con_bot_left">
+									<div class="xsb_tt_con_con_bot_bq">标签</div>
+									<foreach name="zxtop_item.tag_arr" item="zxtags" >
+									<span class="fl line20 col666 f14" style="margin-left:10px;">{$zxtags}</span>
+									</foreach>
+								</div>
+								<div class="xsb_tt_con_con_bot_right">
+									<div class="fl line20 col666 f14">发布的人：{$zxtop_item.writer}</div>
+									<div class="fl line20 col666 f14" style="margin-left:15px;">{$zxtop_item.update_time|date="Y-m-d",###}</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				</foreach>
+			</ul>
+		</div>
+		<div class="xsb_bk fr">
+			<div class="title w100">
+				<em>三板百科</em>
+				<i></i>
+				<a href="{:U('baike/index')}">更多&gt;&gt;</a>
+			</div>
+			<div class="kong30"></div>
+			<section id="baike" class="baike">
+				
+				<div class="baike_con">
+					<ul>
+					<foreach name="baike_top" item="baike_top_item" >
+						<li style="background:url({$baike_top_item.icon}) no-repeat center;"><a href="{:U('article/inside',array('id'=>$baike_top_item['id']))}" target="_blank"></a></li>
+					</foreach>
+					</ul>
+				</div>
+				<a class="prev baike_prev" href="javascript:void(0)">&lt;</a>
+				<a class="next baike_next" href="javascript:void(0)">&gt;</a>
+			</section>
+			<ul class="baike_list">
+				<foreach name="baike_list" item="baike_list_item">
+				<li><i>●</i><a href="{:U('article/inside',array('id'=>$baike_list_item['id']))}" class="thidden">{$baike_list_item.title|msubstr=###,0,20}</a></li>
+				</foreach>
+			</ul>
+		</div>
+	</section>
+<!--三板头条百科 end-->
+<div class="kong50"></div>
+<include file="Public:footer" />

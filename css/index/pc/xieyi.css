@@ -1,0 +1,8 @@
+@charset "utf-8";
+.disclaimer_tit{height:50px; line-height:50px; background:#bb3333; box-sizing:border-box; padding:0 15px; cursor:pointer;}
+.disclaimer_tit em{float:left; height:50px; color:white; font-size:18px;}
+.disclaimer_tit span{float:right; height:50px; color:black; font-size:18px; background:url(../img/attention.png) no-repeat left center; background-size:20px 20px; padding-left:25px;}
+.disclaimer{padding-bottom:60px;}
+.disclaimer p{font-size:14px; line-height:28px;}
+p.pwei{font-size:16px; margin-top:40px; color:#222;font-weight:600;}
+p.p2em{text-indent:2em;}

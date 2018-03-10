@@ -1,0 +1,79 @@
+<include file="Common:header" />
+<script>
+    var dump="{:U('dump')}";
+    var restore="{:U('restore')}";
+    var deletebak="{:U('delete')}";
+
+</script>
+<script src="__ROOT__/js/admin/admin.js"></script>
+<script src="__ROOT__/js/admin/tablelist.js"></script>
+<script src="__ROOT__/js/admin/databak.js"></script>
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>数据备份列表</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a id="nowbak" onclick="backup();">创建备份</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row row-lg">
+            <div class="col-sm-12">
+                <!-- Example Events -->
+                <div class="example-wrap">
+
+                    <div class="example">
+                        <div class="btn-group hidden-xs" id="tableToolbar" role="group">
+
+                            <a onclick="backup();" class="btn btn-outline btn-default">
+                            <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+                            </a>
+
+                       <!--     <button type="button" class="btn btn-outline btn-default">
+                                <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+                            </button>-->
+                   <!--         <button type="button" class="btn btn-outline btn-default btndelete">
+                                <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                            </button>-->
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example">
+                                <thead>
+                                <tr>
+                                    <th>卷名</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <foreach name="sql_list" item="list" key="key">
+                                        <tr>
+                                            <td style="text-align: left">{$key}</td>
+                                            <td>{$key|date='Y-m-d H:i:s',###}</td>
+                                            <td>
+                                                <a class="btn btn-warning btn-sm"  onclick="restore_db({$key});">还原</a>
+                                                <a class="btn btn-danger btn-sm"  onclick="delsql({$key});">删除</a>
+                                            </td>
+                                        </tr>
+                                </foreach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Common:footer" />

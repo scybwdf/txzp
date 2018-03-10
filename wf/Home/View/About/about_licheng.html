@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于我们</title>
+<?php 
+	$pagecss[]= WEB_ROOT."/css/index/pc/common.css";
+   	$pagecss[]= WEB_ROOT."/css/index/pc/about.css";
+   	$pagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+  	$cpagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+?>
+ <link href="{:parse_css($pagecss,pc)}" rel="stylesheet">
+ <script type="text/javascript" src="{:parse_script($pagejs,$cpagejs,pc)}"></script>
+</head>
+
+<body>
+<section class="w100 about">
+		<div class="about_nav w100">
+		<div class="about_nav_con w1200">
+			<h1 class="fl"><a class="dis-blo" href="##"><img class="dis-blo" src="../img/pc/about/about_logo.png" alt=""></a></h1>
+			<div class="about_nav_item fr">
+				<ul class="clearfix">
+					<li class="about_nav_list"><a href="{:U('About/index')}">公司介绍</a></li>
+					<li class="about_nav_list  about_active"><a href="{:U('About/connect')}">联系我们</a></li>
+					<li class="about_nav_list"><a href="{:U('Index/index')}">返回首页&gt;</a></li>
+				</ul>
+				<div class="heng"></div>
+			</div>
+		</div>
+	</div>
+	<div class="about_main w100">
+		<div class="about_con about_li w1200">
+			<img class="dis-blo ma" src="../img/pc/about/licheng.png" alt="">
+		</div>
+		<ul class="nav_nav clearfix w1200">
+			<li><a href="{:U('About/index')}">我们是谁</a></li>
+			<li><a href="{:U('About/youshi')}">竞争优势</a></li>
+			<li class="active"><a style="background:url(img/about/nav_33.png) no-repeat center top;" href="{:U('About/licheng')}">发展历程</a></li>
+		</ul>
+	</div>
+	<div class="about_footer w100">Copyright&nbsp;&nbsp;©-投资达克版权所有 沪ICP备16034773号-1</div>
+</section>
+</body>
+<script type="text/javascript">
+	$(function(){
+		var liWidth = $(".about_nav_list").width();
+		var activeIndex = $(".about_active").index();
+		var hengOffset = activeIndex*liWidth+10;
+		
+		
+		$(".about_nav_list").hover(function(){
+			var liIndex = $(this).index();
+			var offset = liWidth*liIndex+10;
+			$(".heng").css("left",offset);
+		},function(){
+			$(".heng").css("left",hengOffset);
+		});
+	})
+</script>
+</html>

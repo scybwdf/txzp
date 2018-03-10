@@ -1,0 +1,177 @@
+<include file="Public:header" />
+<!--banner部分开始-->
+	<section class="block_home_slider baibg">
+		<div id="home_slider" class="flexslider">
+			<ul class="slides">
+			<foreach name="banner_list" item="banner_list_item">
+				<li>
+					<a class="slide" href="{$banner_list_item.url}" target="_blank">
+						<img src="{$banner_list_item.image}" alt="{$banner_list_item.title}" />
+					</a>
+				</li>
+			</foreach>	
+			</ul>
+		</div>
+	</section>
+<!--banner部分结束-->
+	<div class="phkong08"></div>
+<!--新三板 begin-->
+	<section class="w100 pneeq baibg">
+		<ul class="pneeq_nav clearfix">
+			<li><a href="##">新三板是什么</a></li>
+			<li><a href="##">新三板怎么选</a></li>
+			<li><a href="##">新三板答疑</a></li>
+			<li><a href="##">新三板开户</a></li>
+		</ul>
+	</section>
+<!--新三板 end-->
+<!--<div class="phkong08"></div>-->
+<!--三板头条 begin-->
+	<section class="w100 pnews">
+		<div class="pnews_left"><img src="__ROOT__/img/wap/pnews.png" alt=""></div>
+		<div class="pnews_mid_out">
+			<div class="pnews_mid">
+				<ul class="pnews_mid_con">
+				<foreach name="hot_art" item="hot_art_item">
+					<li><a class="thidden" href="{:U('Article/inside',array('id'=>$hot_art_item['id']))}">{$hot_art_item.title}</a></li>
+				</foreach>	
+				</ul>
+			</div>
+		</div>
+		<a class="pnews_right" href="{:U('Article/index')}">&gt;</a>
+	</section>
+<!--三板头条 end-->
+<!--<div class="phkong08 baibg"></div>-->
+<!--精选 begin-->
+	<section class="w100">
+		<div class="block_header w100 baibg">
+			-&nbsp;&nbsp;热门精选专区&nbsp;&nbsp;-
+			<a href="{:U('Deal/index')}">更多&gt;&gt;</a>
+		</div>
+		<div class="jxmain w100">
+			<ul class="phitem w100">
+			<foreach name="hot_deal" item="hot_deal_item">
+			<li class="phitem_con">
+				<a class="dis-blo" href="{:U('Deal/inside',array('id'=>$hot_deal_item['id']))}">
+					<div><img class="dis-blo" src="{$hot_deal_item.mobile_img}" alt=""></div>
+					<ul class="clearfix w100">
+						<li class="pimess_list pimess_list1">
+							<span>企业简称：</span>
+							<em>{$hot_deal_item.jianname}</em>
+						</li>
+						<li class="pimess_list pimess_list2">
+							<span>地址区域：</span>
+							<em>{$hot_deal_item.province}{$hot_deal_item.city}</em>
+						</li>
+						<li class="pimess_list pimess_list3">
+							<span>法人代表：</span>
+							<em>{$hot_deal_item.frdaibiao}</em>
+						</li>
+						<li class="pimess_list pimess_list4">
+							<span>证券代码：</span>
+							<em>{$hot_deal_item.daima}</em>
+						</li>
+					</ul>
+				</a>
+				<div class="phitem_con_yy phyuyue">预约咨询</div>
+			</li>
+		</foreach>	
+		</ul>
+		</div>
+	</section>
+<!--精选 end-->
+	<div class="phkong08"></div>
+<!--视频解说 begin-->
+	<section class="w100">
+		<div class="block_header w100 baibg">
+			-&nbsp;&nbsp;视频解说&nbsp;&nbsp;-
+			<a href="{:U('Video/index')}">更多&gt;&gt;</a>
+		</div>
+		<div class="pvideo baibg w100">
+			<a href="{:U('Video/inside',array('id'=>$video_top['id']))}" class="nimabi_video_top dis-blo">
+				<img class="dis-blo" src="{$video_top.img}" width="100%" alt="">
+				<a href="{:U('Video/inside',array('id'=>$video_top['id']))}" class="video_name dis-blo">
+		
+					<div class="video_title">{$video_top.name|msubstr=###,0,25}</div>
+
+					<div class="video_look_time clearfix">
+						<em class="video_look">{$video_top.readrow}</em>
+						<span class="video_time">{$video_top.update_time|date='Y-m-d',###}</span>
+					</div>
+
+				</a>
+			</a>
+			<ul class="nimabi_video_small clearfix">
+			<foreach name="video_index" item="video_item" >
+				<li>
+					<a href="{:U('Video/inside',array('id'=>$video_item['id']))}" class="dis-blo">
+						<img class="dis-blo" src="{$video_item.img}" width="100%" alt="">
+					</a>
+					<a href="{:U('Video/inside',array('id'=>$video_item['id']))}" class="video_name dis-blo">
+						<div class="video_title thidden">{$video_item.name|msubstr=###,0,25}</div>
+
+						<div class="video_look_time clearfix">
+							<em class="video_look">{$video_item.readrow}</em>
+							<span class="video_time">{$video_item.update_time|date='Y-m-d',###}</span>
+						</div>
+					</a>
+				</li>
+				</foreach>
+			</ul>
+		</div>
+	</section>
+<!--视频解说 end-->
+	<div class="phkong08"></div>
+<!--财经资讯 begin-->
+	<section class="w100">
+		<div class="block_header w100 baibg">
+			-&nbsp;&nbsp;财经资讯&nbsp;&nbsp;-
+			<a href="{:U('Article/index')}">更多&gt;&gt;</a>
+		</div>
+		<div class="phkong05"></div>
+		<ul class="part baibg">
+		<foreach name="artlist" item="artlist_item">
+			<li>
+				<a class="dis-blo" href="{:U('Article/inside',array('id'=>$artlist_item['id']))}">
+					<div class="part_tit">{$artlist_item.title|msubstr=###,0,20}</div>
+					<div class="part_bq clearfix">
+						<div class="part_bq_left fl">
+						<foreach name="artlist_item['tag_arr']" item="tag_item" >
+							<span>{$tag_item}</span>
+						</foreach>	
+						</div>
+						<div class="part_bq_right fr">{$artlist_item.update_time|date='Y-m-d',###}</div>
+					</div>
+				</a>
+			</li>
+		</foreach>	
+		</ul>
+	</section>
+<!--财经资讯 end-->
+	<div class="phkong08"></div>
+
+<!--客服 begin-->
+	<section class="w100 kefu phoneleft ">客服热线：<span>400-169-9118</span>（免费）</section>
+<!--客服 end-->
+	<div class="phkong08"></div>
+<!--链接 begin-->
+	<section class="w100 lianjie baibg">
+		<a href="##">关于我们</a>
+		<a href="##">新三板开户</a>
+		<a href="##">新三板常见问题</a>
+	</section>
+	<div class="phkong08"></div>
+<!--链接 end-->
+	<script type="text/javascript">
+	$(function () {
+		$('#home_slider').flexslider({
+			animation : 'slide',
+			controlNav : true,
+			directionNav : true,
+			animationLoop : true,
+			slideshow : true,
+			useCSS : false
+		});
+	});		
+</script> 
+<include file="Public:footer" />

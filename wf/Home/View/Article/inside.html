@@ -1,0 +1,137 @@
+<include file="Public:header" />
+  <div id="artIn" class="wfull">
+        <div class="artInCon w1200 clearfix">
+<!--
+            <div class="header_item wfull" style="background:url(/img/header_item.png) no-repeat center center;">
+				<div class="w1200 clearfix">
+					<a href="/zhuanti/type-0-id-154.html" class="fl" style="width:880px;height:90px;"></a>
+					<a href="/zhuanti/type-0-id-154.html" class="fl" style="width:320px;height:90px;"></a>
+				</div>
+			</div>
+-->
+            <div class="kong30"></div>
+            <div class="artInConShow w1200 clearfix">
+                <div class="artInConLeft fl">
+                    <div class="artInConLeftCon">
+                        <h3 class="fweight6 col222 f20">{$article.title}</h3>
+                        <div class="kong5"></div>
+                        <div class="wwh">
+                            <span class="dis-inlblo f12 col222">来源：<if condition="$article['writer'] neq ''">{$article.writer}<else />投资达客</if>&nbsp;&nbsp;&nbsp;</span>
+                            <span class="dis-inlblo f12 col222">发布时间：{$article.update_time|date="Y-m-d",###}&nbsp;&nbsp;&nbsp;</span>
+                            <span class="dis-inlblo f12 col222">浏览次数：{$article.click_count}&nbsp;&nbsp;&nbsp;</span>
+                        </div>
+                        <div class="kong15"></div>
+                        <div class="artInConLeftBQ">
+                           <foreach name="article['tags_arr']" item="artags">
+                            <span class="dis-inlblo colfff f12" style="margin-right: 5px;">{$artags}</span>
+                            </foreach>
+                        </div>
+                        <div class="kong15"></div>
+                        <div class="artInConLeftTxt">
+                            {$article.content}
+                        </div>
+                        <div class="jiathis_style_32x32 clearfix">
+                            <span class="fl line30">分享到：</span>
+                            <a class="jiathis_button_weixin"></a>
+                            <a class="jiathis_button_cqq"></a>
+                            <a class="jiathis_button_qzone"></a>
+                            <a class="jiathis_button_tsina"></a>
+                        </div>
+                        <div class="kong30"></div>
+                        <div class="artInConLeftBeatch p-rel clearfix">
+                            <div class="artInConLeftYuyue fl p-rel">
+                                <img class="dis-blo" src="__ROOT__/img/pc/arvticalyuyue.png" alt="">
+                                <div class="artInConLeftYuyueCon">
+                                    <form action="">
+                                        <input class="fl" style="width:118px;" type="text" placeholder="姓名">
+                                        <input class="fr" style="width:218px;" type="text" placeholder="手机号码">
+                                        <input class="pointer" style="width:355px;height:48px;line-height:48px;padding:0px;text-align:center;color:#fff;margin-top:15px;" type="submit" value="立即订阅">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="littleangle">◆</div>
+                            <div class="artInConLeftEWM fl p-rel">
+                                <img class="dis-blo" src="__ROOT__/img/pc/arvticalewm.png" alt="">
+                                <div class="artInConLeftEWMcon">
+                                    <img class="dis-blo" src="__ROOT__/img/pc/arcewm.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kong20"></div>
+                        <div class="articalPN clearfix">
+                           <if condition="$prevarticle['id'] neq ''">
+                            <a href="{:U('Article/inside',array('id'=>$prevarticle['id']))}" class="articalP fl col666 f12 thidden">上一篇：{$prevarticle.title|msubstr=###,0,30}</a>
+                            <else />
+                             <a href="" class="articalP fl col666 f12 thidden">上一篇：没有更多了</a>
+                            </if>
+                            <if condition="$nextarticle['id'] neq ''">
+                            <a href="{:U('Article/inside',array('id'=>$nextarticle['id']))}" class="articalN fr col666 f12 thidden">上一篇：{$nextarticle.title|msubstr=###,0,30}</a>
+                            <else />
+                            <a href="" class="articalN fr col666 f12 thidden">上一篇：没有更多了</a>
+                            </if>
+                        </div>
+                    </div>
+                    <div class="kong30"></div>
+                    <div class="artInConLeftTui w100">
+                        <h2 class="neixH w100 fweight1">
+                           <span class="f20 fl col222">推荐阅读</span>
+                           <a class="f16 fr col666" href="##">更多&gt;&gt;</a>
+                        </h2>
+                        <div class="kong15"></div>
+                        <ul class="artInConLeftTuiCon clearfix">
+                           <foreach name="tuijianart" item="art_item">
+                            <li>
+                                <a class="dis-blo" href="{:U('Article/inside',array('id'=>$art_item['id']))}">
+                                    <img class="dis-blo" src="{$art_item.icon}" width="240" height="160" alt="">
+                                    <span class="dis-blo">{$art_item.title|msubstr=###,0,30}</span>
+                                </a>
+                            </li>
+                            </foreach>
+                        </ul>
+                    </div>
+                </div>
+                <div class="artInConRight fr">
+                   <a class="dis-blo" href="{:U('Deal/inside',array('id'=>$hot_deal['id']))}">
+                    <img class="dis-blo" style="border:1px solid #999;" src="{$hot_deal.image}" width="358" alt="">
+                    </a>
+                    <div class="kong30"></div>
+                    <div class="artInConRightArts w100">
+                        <div class="kong15"></div>
+                        <h2 class="neixH w100 fweight1">
+                           <span class="f16 fl col222">推荐阅读</span>
+                        </h2>
+                        <div class="kong20"></div>
+                        <ul class="artInConRightList">
+                           <foreach name="articlehot" item="arthot_item">
+                            <li class="clearfix">
+                                <span class="fl colfff"></span>
+                                <a class="fl thidden" href="{:U('Article/inside',array('id'=>$arthot_item['id']))}">{$arthot_item.title}</a>
+                            </li>
+                          </foreach> 
+                        </ul>
+                        <div class="kong20"></div>
+                    </div>
+                    <div class="kong30"></div>
+                    <div class="artInConRightWiki">
+                        <h2 class="neixH w100 fweight1">
+                           <span class="f16 fl col222">百科知道</span>
+                           <a class="f14 fr col666" href="{:U('deal/qaneeq')}">更多&gt;&gt;</a>
+                        </h2>
+                        <ul class="artInConRightWikiList clearfix">
+                            <li class="artInConRightWikiListCon1"><a href="{:U('deal/qaneeq')}">新三板是什么</a></li>
+                            <li class="artInConRightWikiListCon2"><a href="{:U('deal/qaneeq')}">新三板怎么开户</a></li>
+                            <li class="artInConRightWikiListCon3"><a href="{:U('deal/qaneeq')}">新三板怎么买</a></li>
+                            <li class="artInConRightWikiListCon4"><a href="{:U('deal/qaneeq')}">新三板上市条件</a></li>
+                            <li class="artInConRightWikiListCon5"><a href="{:U('deal/qaneeq')}">新三板交易规则</a></li>
+                            <li class="artInConRightWikiListCon6"><a href="{:U('deal/qaneeq')}">新三板挂牌流程</a></li>
+                        </ul>
+                    </div>
+                    <div class="kong30"></div>
+                    <img class="dis-blo" src="__ROOT__/img/pc/artright2.jpg" width="360" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" async src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<include file="Public:footer" />

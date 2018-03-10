@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+<meta name="renderer" content="webkit" />
+<meta charset="UTF-8">
+<meta name="keywords" content="{:C('system')['SEO_KEYWORDS']}" />
+<meta name="description" content="{:C('system')['SEO_BRIEF']}" />
+<title><if condition="$page_title neq ''">{$page_title}_</if>{:C('system')['SEO_TITLE']}</title>
+<?php 
+   		$pagecss[]= WEB_ROOT."/css/index/wap/phcommon.css";
+   		$pagecss[]= WEB_ROOT."/css/index/wap/phbanner.css";
+   		$pagecss[]= WEB_ROOT."/css/index/wap/phdake.css";
+   		$pagecss[]= WEB_ROOT."/css/common/flavr.css";
+   		$spagejs[]=WEB_ROOT."/js/index/wap/important.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/wap/important.js";
+   		$spagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/wap/ajaxlogin.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/wap/ajaxlogin.js";
+  	 	$spagejs[]=WEB_ROOT."/js/index/wap/jquery.flexslider.js";
+  	 	$scpagejs[]=WEB_ROOT."/js/index/wap/jquery.flexslider.js";
+  	 	$pagejs[]=WEB_ROOT."/js/index/wap/index.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/wap/index.js";
+  	 	$pagejs[]=WEB_ROOT."/js/common/flavr.min.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/common/flavr.min.js";
+  	 	$pagejs[]=WEB_ROOT."/js/index/pc/footer.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/pc/footer.js";
+   		if(CONTROLLER_NAME."/".ACTION_NAME=='Index/index'){
+   		$pagecss[]= WEB_ROOT."/css/index/wap/index.css";
+   		}
+   		if(CONTROLLER_NAME=='Article'){
+   		$pagecss[]= WEB_ROOT."/css/index/wap/article.css";
+   		$pagecss[]= WEB_ROOT."/css/index/wap/articlein.css";
+   		$pagejs[]=WEB_ROOT."/js/index/wap/article.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/wap/article.js";
+   		}
+   		
+   		if(CONTROLLER_NAME=='Login'){
+   		$pagecss[]= WEB_ROOT."/css/index/wap/login.css";
+   		$pagejs[]=WEB_ROOT."/js/index/pc/jquery.validate.min.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/pc/jquery.validate.min.js";
+  	 	$pagejs[]=WEB_ROOT."/js/index/wap/messages_zh.min.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/wap/messages_zh.min.js";
+   		$pagejs[]=WEB_ROOT."/js/index/wap/login.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/wap/login.js";
+   		}
+   		if(CONTROLLER_NAME=='Video'){
+   		$spagejs[]= "https://yuntv.letv.com/player/vod/bcloud.js";
+		$scpagejs[] ="https://yuntv.letv.com/player/vod/bcloud.js";
+   		$pagecss[]= WEB_ROOT."/css/index/wap/video.css";
+   		$pagecss[]= WEB_ROOT."/css/index/wap/videoin.css";
+   		}
+   		if(CONTROLLER_NAME=='Deal'){
+   		$pagecss[]= WEB_ROOT."/css/index/wap/deal.css";
+   		$pagecss[]= WEB_ROOT."/css/index/wap/dealin.css";
+   		$pagejs[]=WEB_ROOT."/js/index/wap/deal.js";
+  	 	$cpagejs[]=WEB_ROOT."/js/index/wap/deal.js";
+   		}
+   		if(CONTROLLER_NAME=='About'){
+   		$pagecss[]= WEB_ROOT."/css/index/wap/about.css";
+   		$pagecss[]= WEB_ROOT."/css/index/wap/about.css";
+   		}
+   		if(CONTROLLER_NAME."/".ACTION_NAME=='Deal/inside'){
+   		//$pagecss[]= WEB_ROOT."/css/index/pc/deal_in.css";
+   		$spagejs[]="https://yuntv.letv.com/player/vod/bcloud.js";
+   		$scpagejs[]="https://yuntv.letv.com/player/vod/bcloud.js";
+   		}
+  	 	
+   	 ?>
+ <script>
+ var loginin="{:U('Login/login')}";	 
+ var loginout="{:U('Login/loginout')}";
+var yuyueurl="{:U('Ajax/yuyue')}";	 
+</script>
+ <link href="{:parse_css($pagecss,wap)}" type="text/css" charset="utf-8" rel="stylesheet">
+<script type="text/javascript" src="{:parse_script($spagejs,$scpagejs,wap)}"></script>
+
+</head>
+<body>
+<if condition="(CONTROLLER_NAME.ACTION_NAME eq ('Dealinside')) OR (CONTROLLER_NAME eq ('Login')) OR  (CONTROLLER_NAME eq ('About'))  ">
+<else />
+<!--顶部LOGO开始（header）-->
+	<section  class="phLogo w100 bgf9 clearfix p-rel">
+		<h1><img class="dis-blo" src="__ROOT__/img/wap/phLogo.png" alt=""></h1>
+		<!--<div class="phLogo_txt"><span>中国金融行业十大诚信品牌企业</span></div>-->
+		<div id="login_start" >
+		<if condition="session('wapuser') eq ''">
+		<!--登录之前-->
+		<a href="{:U('Login/login')}" class="before_login">登录</a>
+		<else />
+		<!--登录之后-->
+		<div class="phLogo_login">{:session('wapuser')}<span></span></div>
+		<div class="close_login dis-non p-abs">退出</div>
+		</div>
+		</if>
+	</section>
+<!--顶部LOGO结束（header）-->
+<!--导航栏 begin-->
+	<section class="w100 baibg clearfix">
+		<ul class="pnav clearfix">
+			<li class="<if condition="CONTROLLER_NAME eq 'Index' ">active</if>"><a href="{:U('Index/index')}">首页</a></li>
+			<li class="<if condition="CONTROLLER_NAME eq 'Deal' ">active</if>"><a href="{:U('Deal/index')}">精选项目</a></li>
+			<li class="<if condition="CONTROLLER_NAME eq 'Video' ">active</if>"><a href="{:U('Video/index')}">视频解说</a></li>
+			<li class="<if condition="CONTROLLER_NAME eq 'Article' ">active</if>"><a href="{:U('Article/index')}">财经资讯</a></li>
+			<li class="<if condition="CONTROLLER_NAME eq 'About' ">active</if>"><a href="{:U('About/index')}">关于我们</a></li>
+		</ul>
+	</section>
+<!--导航栏 end--> 
+</if>

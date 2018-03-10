@@ -1,0 +1,204 @@
+<!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span><img alt="image" class="img-circle" src="{$avatar}" /></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                               <span class="block m-t-xs"><strong class="font-bold">{:session('auth')['username']}</strong></span>
+                                <span class="text-muted text-xs block">{$grouptitle}<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="J_menuItem" href="{:U('User/avatar')}">修改头像</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="{:U('Login/loginout')}">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">wf
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-home"></i>
+                            <span class="nav-label">主页</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                             <li>
+                                <a class="J_menuItem" href="{:U('Yuyue/index')}" data-index="0">预约列表</a>
+                            </li>
+                           <!-- <li>
+                                <a class="J_menuItem" href="{:U('User/index')}" data-index="0">注册用户列表</a>
+                            </li>-->
+                            
+                        </ul>
+
+                    </li>
+                       <li>
+                        <a href="#">
+                            <i class="fa fa-bars"></i>
+                            <span class="nav-label">导航栏目</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="{:U('Nav/index')}" data-index="0">导航栏目列表</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Nav/add')}">新增导航栏目</a>
+                            </li>
+                        </ul>
+                    </li>
+                       <li>
+                        <a href="#">
+                            <i class="fa fa-book"></i>
+                            <span class="nav-label">文章分类管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                           <ul class="nav nav-second-level">
+                               <li>
+                                   <a class="J_menuItem" href="{:U('ArticleCate/add')}" data-index="0">新增文章分类</a>
+                               </li>
+                               <li>
+                                   <a class="J_menuItem" href="{:U('ArticleCate/index')}" data-index="0">文章分类列表</a>
+                               </li>
+                               <li>
+                                   <a class="J_menuItem" href="{:U('ArticleCate/trash')}" data-index="0">文章分类回收站</a>
+                               </li>
+                           </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-book"></i>
+                            <span class="nav-label">文章管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+
+
+                            <li>
+                                <a class="J_menuItem" href="{:U('Article/add')}" data-index="0">新增文章</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Article/index')}" data-index="0">文章列表</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Article/trash')}" data-index="0">文章回收站</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                   <!--    <li>
+                        <a href="#">
+                            <i class="fa fa-star"></i>
+                            <span class="nav-label">项目管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="{:U('Deal/index')}" data-index="0">新三板项目列表</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Deal/add')}">新增新三板项目</a>
+                            </li>
+                        </ul>
+                    </li>-->
+                       <!--  <li>
+                        <a href="#">
+                            <i class="fa fa-video-camera"></i>
+                            <span class="nav-label">视频管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="{:U('Video/index')}" data-index="0">视频列表</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Video/add')}">新增视频</a>
+                            </li>
+                        </ul>
+                    </li>-->
+                    <!--     <li>
+                        <a href="#">
+                            <i class="fa fa-user-secret"></i>
+                            <span class="nav-label">路演管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="{:U('Luyan/index')}" data-index="0">路演列表</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Luyan/add')}">新增路演</a>
+                            </li>
+                        </ul>
+                    </li>-->
+                          <li>
+                        <a href="#">
+                            <i class="fa fa-image"></i>
+                            <span class="nav-label">banner图管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="{:U('Banner/index')}" data-index="0">banner图管理列表</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Banner/add')}">新增banner图</a>
+                            </li>
+                        </ul>
+                    </li>
+                      <li>
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span class="nav-label">管理员权限设置</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="{:U('Admin/index')}" data-index="0">管理员列表</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Group/index')}">管理员分组</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('AuthRule/index')}">权限规则列表</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                     <li>
+                        <a href="#">
+                            <i class="fa fa-cogs"></i>
+                            <span class="nav-label">系统设置</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                              <li>
+                                <a class="J_menuItem" href="{:U('System/index')}" data-index="0">网站设置</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Databak/index')}" data-index="0">数据库备份</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Group/index')}">管理员分组</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Msgtemp/index')}">信息模板设置</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:U('Sms/index')}">短信配置</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->

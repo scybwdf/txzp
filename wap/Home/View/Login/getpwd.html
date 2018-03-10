@@ -1,0 +1,41 @@
+<include file="Public:header" />
+<script>
+var do_logurl="{:U('Login/do_login')}";
+var do_regurl="{:U('Login/do_register')}";
+var vercodeurl="{:U('Login/get_msgcode')}";
+var checkcode="{:U('Login/checkcode')}";
+var checkmo="{:U('Login/checkmo')}";
+var pwdcodeurl="{:U('Login/pwdcode')}";	
+var do_getpwd="{:U('Login/do_getpwd')}";	
+</script>
+<body>
+<section class="login_top w100">
+		<a href="javascript:history.go(-1)" class="back_go">&lt;</a>
+		<div class="top_back_pwd">
+			找回密码
+		</div>
+	</section>
+	<div class="phkong15"></div>
+	<section class="reg_con w100">
+		<form name="getpwd" acaction="" >
+			<input class="reg_name remobile" type="text" name="mobile" placeholder="请输入您的账号">
+			<hr style="border:0;background:#ccc;height:1px;">
+			<div class="reg_yzm">
+				<input class="reg_yzm_num" name="code" type="text" placeholder="请输入验证码">
+				<input class="reg_yzm_btn reg_code_right" type="button" value="发送验证码">
+			</div>
+			<hr style="border:0;background:#ccc;height:1px;">
+			<input class="reg_pwd" type="password" name="password" autocomplete="new-password" placeholder="请输入新密码">
+			<input class="reg_submit" type="submit" value="提交">
+		</form>
+<!--		<a href="##" class="reg_agree">点击“注册”按钮，表示您已阅读并同意<span style="color:#337ab7;">《投资达客用户协议》</span></a>-->
+	</section>
+	<div class="phkong25"></div>
+<!--链接 begin-->
+	<section class="w100 lianjie baibg">
+		<a href="##">关于我们</a>
+		<a href="##">新三板开户</a>
+		<a href="##">新三板常见问题</a>
+	</section>
+	<div class="phkong15"></div>
+<include file="Public:footer" />

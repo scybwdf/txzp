@@ -1,0 +1,53 @@
+<include file="Public:header" />
+<script>
+var do_logurl="{:U('Login/do_login')}";
+var do_regurl="{:U('Login/do_register')}";
+var vercodeurl="{:U('Login/get_msgcode')}";
+var checkcode="{:U('Login/checkcode')}";
+var checkmo="{:U('Login/checkmo')}";
+var pwdcodeurl="{:U('Login/pwdcode')}";	
+var do_getpwd="{:U('Login/do_getpwd')}";	
+</script>
+<body>
+	<section class="login_top w100">
+		<a href="javascript:history.go(-1)" class="back_go">&lt;</a>
+		<ul class="log_reg">
+			<li class="log_o_reg log_reg_active fl">登录</li>
+			<li class="log_o_reg fl">注册</li>
+		</ul>
+	</section>
+	<div class="phkong15"></div>
+	
+	<section class="login_con w100">
+		<form  name="sublog" action="">
+			<input class="login_name" type="text" name="mobile"  placeholder="请输入您手机号">
+			<hr style="border:0;background:#ccc;height:1px;">
+			<input class="login_pwd" type="password" name="password" autocomplete="new-password"  placeholder="请输入您的密码">
+			<input class="login_submit" type="submit" value="登录">
+		</form>
+		<a href="{:U('Login/getpwd')}" class="forget_pwd">忘记密码？</a>
+	</section>
+	
+	<section class="reg_con w100 dis-non">
+		<form name="subreg" action="">
+			<input class="reg_name remobile" type="text" autocomplete="off" name="mobile"  placeholder="请输入您手机号">
+			<hr style="border:0;background:#ccc;height:1px;">
+			<input class="reg_pwd" type="password" autocomplete="new-password" name="password"  placeholder="请输入您的密码">
+			<hr style="border:0;background:#ccc;height:1px;">
+			<div class="reg_yzm">
+				<input class="reg_yzm_num" autocomplete="off"  name="code" type="text" placeholder="请输入验证码">
+				<input class="reg_yzm_btn reg_code_right" type="button" value="发送验证码">
+			</div>
+			<input class="reg_submit" type="submit" value="注册">
+		</form>
+		<a href="##" class="reg_agree">点击“注册”按钮，表示您已阅读并同意<span style="color:#337ab7;">《投资达客用户协议》</span></a>
+	</section>
+	
+<!--链接 begin-->
+	<section class="w100 lianjie baibg">
+		<a href="##">关于我们</a>
+		<a href="##">新三板开户</a>
+		<a href="##">新三板常见问题</a>
+	</section>
+	<div class="phkong15"></div>
+<include file="Public:footer" />

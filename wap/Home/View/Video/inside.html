@@ -1,0 +1,18 @@
+<include file="Public:header" />
+<section class="videolistin">
+		<div class="video_port">
+		<div id="player" style="width:100%;">
+			<script>
+				var player=new CloudVodPlayer();
+				player.init({uu:"ifpw55qjou",vu:"{$videoin.video_unique}",pu:"d6aca37b78",controls:1,posterType:3,autoSize:1,skinnable:1,changeParent:0,playsinline:1,dfull:0,auto_play:0});
+			</script>
+			</div>
+	</div>
+	<div class="phkong02" style="background:#bb3333;"></div>
+	<div class="video_txt_port">
+		<div class="video_txt_h">{$videoin.name}</div>
+		<div class="video_txt_tit">【视频简要】</div>
+		<div class="video_txt_con">{$videoin.content|htmlspecialchars_decode=###}</div>
+	</div>
+</section>
+<include file="Public:footer" />

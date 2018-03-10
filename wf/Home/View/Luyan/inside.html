@@ -1,0 +1,96 @@
+<include file="Public:header" />
+    <div class="wfull bgf2">
+        <div class="kong20"></div>
+    </div>
+
+    <div class="lyWithinSub wfull">
+        <div class="w1200 lyWithinSubCon">
+            <div class="lyWithinSubConLeft fl">
+                <img class="dis-blo" src="{$luyan.icon1}" width="420" height="220" alt="">
+            </div>
+            <div class="lyWithinSubConRight fl p-rel">
+                <h3 class="fweight1 col222 f20 pointer">{$luyan.name}</h3>
+                <div class="kong40"></div>
+                <div class="lyinTime w100 thidden f16"><span class="dis-inlblo col666" style="width:100px; letter-spacing:31px;">时间</span>{$luyan.time}</div>
+                <div class="kong10"></div>
+                <div class="lyinComp w100 thidden f16"><span class="dis-inlblo col666" style="width:100px;">主办单位</span>{$luyan.danwei}</div>
+                <div class="kong10"></div>
+                <div class="lyinAddr w100 thidden f16"><span class="dis-inlblo col666" style="width:100px;">路演地点</span>{$luyan.area}</div>
+                <div class="kong10"></div>
+                <div class="lyinPers w100 thidden f16"><span class="dis-inlblo col666" style="width:100px;">活动规模</span>{$luyan.guimo}</div>
+                <if condition="$luyan['is_end'] eq 0">
+                <a style="cursor:pointer" class="yyneeq yuyuenew lyWithinSubConRightHow p-abs dis-blo colfff f16" onClick="$.order()">立即报名<i class="dis-inlblo"></i></a>
+               <else/>
+                 <a style="cursor:pointer" href="{$luyan.zixun}" class="lyWithinSubConRightHow p-abs dis-blo colfff f16">媒体报道<i class="dis-inlblo"></i></a>
+             	 </if>
+            </div>
+         
+       
+        </div>
+    </div>
+    <div class="kong30"></div>
+    <div class="lyWithinIntro wfull">
+        <div class="w1200 lyWithinIntroCon">
+            <h2 class="lyWithinTitle w100 colred f24">活动介绍</h2>
+            <div class="kong30"></div>
+            <p class="w100 line32 f16">{$luyan.brief}</p>
+        </div>
+    </div>
+    <div class="kong30"></div>
+    <div class="lyWithinWho wfull">
+        <div class="w1200 lyWithinWhoCon">
+            <h2 class="lyWithinTitle w100 colred f24">主办方</h2>
+            <div class="kong30"></div>
+            <div class="lyWithinWhoConCompany clearfix">
+                <img class="dis-blo fl" src="{$luyan.icon2}" width="280" height="160" alt="">
+                <div class="lyWithinWhoConCompanyT fl">
+                    <h3 class="f22 col222 fweight1">{$luyan.zhubanfang}</h3>
+                    <div class="kong25"></div>
+                    <p class="f16 line32 w100">{$luyan.zbfbrief}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kong30"></div>
+    <div class="lyWithinWhere wfull">
+        <div class="lyWithinWhereCon w1200">
+            <h2 class="lyWithinTitle w100 colred f24">活动地址</h2>
+            <div class="kong30"></div>
+            <div class="lyWithinWhereConAddr w100 p-rel">
+                <div class="lyWithinWhereConAddrImg w1200 p-rel" style="background:url({$luyan.icon3}) no-repeat center center;">
+                
+                    <div class="dingwei p-rel">
+                        <div class="dquanquan">
+                            <div class="xquanquan"></div>
+                        </div>
+                        <img class="p-abs" src="/img/pc/dingwei.png" width="30" height="43" alt="">
+                        <div class="dingweiming p-abs">
+                            <div class="dingweimingzi p-rel">
+                                <i class="p-abs f26 colfff" style="left:72px; top:-18px;">◆</i>
+                                <div class="dingweimingCon colred f14 talign baibg">{$luyan.area}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--分享开始-->
+                <div class="lyinShare w100 p-abs">
+                    <span class="f22 colfff fl line52">邀请好友：</span>
+                    <div class="jiathis_style_32x32 fl">
+                        <a class="jiathis_button_weixin"></a>
+                        <a class="jiathis_button_cqq"></a>
+                        <a class="jiathis_button_qzone"></a>
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_counter_style dis-non"></a>
+                    </div>
+                    <div class="fr f22 colfff line52" style="margin-right:20px;">活动地址：{$luyan.area}</div>
+                </div>
+                <!--分享结束-->
+            </div>
+
+            <div class="kong30"></div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<include file="Public:footer" />

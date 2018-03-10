@@ -1,0 +1,79 @@
+<tagLib name="html" />
+<include file="Common:header" />
+<script src="__ROOT__/js/admin/admin.js"></script>
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5 class="text-primary text-center">新增banner图</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="{:U('index')}">banner图列表</a>
+				</li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row row-lg">
+            <div class="col-xs-12">
+                <form  class="form-horizontal" method="post" action="{:U('add')}">
+                    <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">标题：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="title" required="" placeholder="">
+                        </div>
+                    </div>
+                     <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">展示图片：</label>
+                        <div class="col-sm-6">
+                             <html:imgUpload id="image" name="image" value=''></html:imgUpload>
+                        </div>
+                    </div>
+                  <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">链接地址：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="url" placeholder="">
+                        </div>
+                    </div>
+                   
+                    <div class="form-group col-sm-12">
+                    	<label class="control-label  col-sm-3">所属类目：</label>
+                    	 <div class= "col-sm-6">
+                              <select name="type" class="form-control chosen-select" >
+                                  <foreach name="banner_type" item="banner_item" key="key">
+									  <option value="{$key}"selected="selected">{$banner_item}</option >
+								  </foreach>
+                              </select>
+                         </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">是否有效：</label>
+                        <div class="col-sm-1">
+                           有效&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_effect" checked="checked" value="1">
+                        </div>
+                         <div class="col-sm-1">
+                           无效&nbsp;&nbsp;<input class="i-checks" type="radio" name="is_effect" value="0">
+                        </div>
+                    </div>
+                     <div class="form-group col-sm-12">
+                        <label class="control-label col-sm-3">排序：</label>
+                        <div class="col-sm-1">
+                            <input type="text" class="form-control" name="sort" value="{$vosort}" required="" placeholder="">
+                        </div>
+                    </div>
+					<div class="col-sm-6 col-sm-offset-5 col-xs-4 col-xs-offset-4 ">
+						<button class="btn btn-primary" type="submit">新增</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Common:footer" />

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.title{height:26px; box-sizing:border-box; border-left:2px solid #bb3333; line-height:26px;}
+.title em{float:left; font-size:24px; line-height:26px; font-weight:600; margin:0 20px 0 15px;}
+.title i{float:left; font-size:18px; line-height:26px;}
+.title a{float:right; font-size:16px; color:#666; line-height:26px;}
+
+
+.ly_will li{border:1px solid #ddd; padding:15px; position:relative; margin-bottom:20px;}
+.ly_will_txt{margin-left:20px; padding-top:25px;}
+.looks{padding-left:30px; background:url(../img/looks.png) no-repeat left center; background-size:25px 25px;}
+.ly_will_txt_yy{width:160px; height:40px; border-radius:20px; background:#bb3333; position:absolute; right:40px; top:50%; margin-top:-20px; line-height:40px; color:#fff; font-size:18px; box-sizing:border-box; padding-left:30px;cursor:pointer;}
+.ly_will_txt_yy i{display:inline-block; width:0px; height:0px; border-width:7px; border-style:solid; border-color:transparent transparent transparent #fff; margin-left:20px; vertical-align:-1px; transition:all linear 0.3s;}
+.ly_will_txt_yy:hover i{margin-left:28px;}
+
+
+.ly_had li{border-bottom:1px solid #ddd; padding:15px; position:relative; margin-bottom:10px;}
+.ly_had_txt{margin-left:30px; padding-top:15px;}
+

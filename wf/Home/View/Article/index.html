@@ -1,0 +1,90 @@
+<include file="Public:header" />
+<div class="blank20"></div>
+<div class="wrap w1200">
+    <div class="news_box">
+        <div class="news_con">
+            <div class="news_left">
+                <div class="lan">
+                    <div class="cn_txt">
+                        <span>文章列表</span>
+                    </div>
+                </div>
+                <foreach name="article_list" item="article_item">
+                <div class="list_news">
+                    <div class="pic">
+                        <a href="{:U('Article/inside',array('id'=>$article_item['id']))}" title="{$article_item.title}">
+                            <img src="{$article_item.icon}" width="285" height="200">
+                        </a>
+                    </div>
+                    <div class="miaosu">
+                        <h2>
+                            <a href="{:U('Article/inside',array('id'=>$article_item['id']))}" title="{$article_item.title}">{$article_item.title}</a>
+                        </h2>
+                        <div class="mscon">{$article_item.brief|msubstr=###,0,120}</div>
+                        <div class="bianqian">
+                            <div class="bianqian_left">
+                                <div class="icon_bq">标签</div>
+                                <div class="bq_list">
+                					<foreach name="article_item['tags_arr']" item="tags">
+                						<a>{$tags}</a>
+                					</foreach>
+        			             </div>
+                            </div>
+                            <div class="bianqian_right">
+                                <div class="gxshijian">
+                                    <span>{$article_item.update_time|date="Y-m-d",###}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				</foreach> 
+                <div class="kong20"></div>
+                <div class="page" style="width:100%;">{$pages}</div>
+                <div class="kong30"></div>
+            </div>
+   <div class="itemConRight fr">
+    <div class="hotNews">
+        <h4 class="itemRightTit"><span>热点要闻</span><a href="">更多&gt;&gt;</a></h4>
+        <ul class="hotNewsCon">
+             <foreach name="newhot" item="newhot_item">
+            <li class="hotNewsList">
+                <i style="margin-right:10px; color:#bb3333; font-size:18px;">●</i><a href="{:U('Article/inside',array('id'=>$newhot_item['id']))}">{$newhot_item.title|msubstr=###,0,30}</a>
+            </li>
+       		</foreach> 
+        </ul>
+    </div>
+   <div class="rightAsideImg">
+       <a style="display:block;" href="{:U('Baike/index')}"><img style="display:block;" src="__ROOT__/img/pc/zixun1.png" alt="" width="320"></a> 
+    </div>
+    <div class="itemYy">
+        <h4 class="itemRightTit"><span>项目预约</span></h4>
+        <p class="itemYyDetail">十年金融界经验沉淀，投资达客超过100名专业理财 师为您提供专业的理财建议，实地考察项目，旨为投 资者做到最完善的数据分析。
+        </p>
+        <div class="itemYyCon">
+            <form method="post" action="http://www.dahaocaifu.com/app/Tpl/fanwe_1/check_deal_investor_yueyu.php">
+                <input name="txt_name" class="itemYyInput itemYyInputBg1" type="text" placeholder="请输入您的姓名">
+                <input style="display:none" id="resource" name="resource">
+                <input name="txt_phone" class="itemYyInput itemYyInputBg2" type="text" placeholder="请输入11位手机号码">
+                <button class="itemYyButton" type="submit">预约咨询</button>
+            </form>
+        </div>
+        <p class="itemYyConnect">如需了解项目详细情况
+            <br>请联系我们：<i style="color:red;">400-780-9118</i>
+        </p>
+    </div>
+    <div class="rightAsideImg">
+        <a style="display:block;" href="{:U('Luyan/index')}"> <img style="display:block;" src="__ROOT__/img/pc/zixun2.png" alt="" width="320"></a>
+    </div>
+    <div class="remind">
+        <h5 class="remindTit">温馨提示：</h5>
+        <p class="remindCon">投资达客平台所展示的项目均属于风险投资。投资达客作为第三方股权投资平台辅助企业与投资者，为其所提供的相关资料、文书、金融技术服务均不构成对项目的要约及承诺；所签订的合同协议仅存在于企业方于个人之间，对使用投资达客平台产生的法律后果将由企业方与投资者自行承担。
+            <p class="remindCon">本内容温馨提醒投资者，个人投资者请在做任何理财投资前，考虑理财标的特点以及评估自身可承受风险程度与其他因素，并适当寻求独立的财务及专业意见，根据自身理财目标、理财期限、理财经验、资产状况等作出合理判断。
+            </p>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="blank20"></div>
+<include file="Public:footer" />

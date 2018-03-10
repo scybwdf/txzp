@@ -1,0 +1,13 @@
+<foreach name="deal_list" item="deal_list_item">
+			<li class="item_list">
+				<a class="dis-blo" href="{:U('Deal/inside',array('id'=>$deal_list_item['id']))}">
+					<img class="dis-blo" src="{$deal_list_item.mobile_img}" width="100%" alt="">
+					<div class="item_tit">
+						<div class="item_tit_left thidden">{$deal_list_item.business_name}</div>
+						<div class="item_tit_right" style="float:left;">{$deal_list_item.tags}</div>
+						<div class="item_des_right">{$deal_list_item.province}</div>
+					</div>
+					<div class="item_order phyuyue">预约咨询</div>
+				</a>
+			</li>
+</foreach>	

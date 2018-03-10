@@ -1,0 +1,33 @@
+@charset "utf-8";
+.artin_top_tit{font-size:1.4rem; color:#222; font-weight:600;box-sizing:border-box; -webkit-box-sizing:border-box; padding:1rem 3%;}
+.artin_con_top{padding:1rem 3%;background:linear-gradient(to bottom,#eee 0%, #fff 40%, #fff 100%); background:-webkit-linear-gradient(to bottom,#eee 0%, #fff 10%, #fff 100%);box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden;}
+.artin_come{font-size:1.2rem; color:#666; height:2rem; line-height:2rem;}
+.artin_come span{margin-right:2rem;}
+.artin_come em{}
+.artin_come i{display:block; vertical-align:6px; font-size:1.2rem; padding-left:1.8rem; height:2rem; background:url(../img/video_eyes.png) no-repeat left 0.2rem / 1.6rem 1.6rem;}
+
+
+.artin_bq_out{overflow:hidden;}
+.artin_bq{ width:1000%;}
+.artin_bq li{float:left; padding:0.4rem 0.7rem; text-align:center; border:0.1rem solid #ccc; color:#ccc; margin-right:1rem; border-radius:0.3rem; box-sizing:border-box; -webkit-box-sizing:border-box;}
+
+
+.artin_des{background:#f1f1f1 url(../img/blockquote.png) no-repeat 0.5rem 0.2rem / 2.4rem 2.4rem; margin-top:1rem; padding:1rem 1rem 1rem 3.2rem; font-size:1.1rem; line-height:1.6rem;}
+
+.artin_con_txt{padding:0.6rem 4% 0; box-sizing:border-box; -webkit-box-sizing:border-box; font-size:1.2rem; line-height:2rem; background:#fff;}
+.artin_con_txt img,.artin_con_txt table{width:100% !important;height: auto !important;}
+.artin_con_kuang{border:0.1rem solid #bbbaba; color:#bbbaba; margin:1.2rem auto; width:92%; box-sizing:border-box; -webkit-box-sizing:border-box; padding:0.6rem; font-size:1.1rem;}
+
+.artin_tj_tit{margin:0rem auto 1.2rem; width:92%; border-bottom:2px solid #0088d7; color:#0088d7; font-size:1.6rem; position:relative;z-index:1; line-height:3rem;}
+.artin_tj_tit::after{content:'';width:0;height:0; border-width:8px; border-style:solid; border-color:transparent transparent #0088d7 transparent; position:absolute; bottom:0px; left:20px; z-index:3;}
+.artin_tj_tit::before{content:'';width:0;height:0; border-width:8px; border-style:solid; border-color:transparent transparent #fff transparent; position:absolute; bottom:-3px; left:20px; z-index:4;}
+
+
+.art{box-sizing:border-box; -webkit-box-sizing:border-box; padding:0 3%;}
+.art li{box-sizing:border-box; -webkit-box-sizing:border-box; padding:1rem 1%; border-bottom:0.1rem solid #ccc;}
+.art_list_right{width:60%;}
+.art_list_tit{width:100%; font-size:1.2rem;}
+.art_list_des{margin-top:1rem; color:#666; font-size:1rem;}
+.art_list_des em{margin-left:1.5rem;}
+
+

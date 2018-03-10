@@ -1,0 +1,58 @@
+<include file="Public:header" />
+<div class="kong50"></div>
+	<section class="choice w1200">
+        <dl class="clearfix">
+            <dt class="fl col666 bb">所属行业</dt>
+            <dd class="bb dealtag">
+                <a class="active" href="javascript:void(0)">全部</a>
+                <foreach name="tags" item="tags_item">
+                <a class="" href="javascript:void(0)">{$tags_item}</a>
+                </foreach>
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt class="fl col666 bb">所属地区</dt>
+            <dd class="bb dealarea">
+                <a class="active" href="javascript:void(0)">全部</a>
+                 <foreach name="area" item="area_item">
+                <a class="" href="javascript:void(0)">{$area_item}</a>
+                </foreach>
+            </dd>
+        </dl>
+	</section>
+<!--choice end-->
+<div class="kong30"></div>
+	<section class="deal ajaxcontent w1200">
+		<div class="newpro-content clearfix">
+           <foreach name="deal_list" item="deal_item">
+            <div class="newpro-tj-list">
+                <a class="proimga" href="{:U('deal/inside',array('id'=>$deal_item['id']))}" style="display:block;">
+                    <img class="newpro-tj-list-img" src="{$deal_item.image|imgqudian=###}" alt="" width="375" height="198">
+                </a>
+                <div class="newpro-tj-list-txt">
+                    <h3><a class="probt" href="{:U('deal/inside',array('id'=>$deal_item['id']))}">{$deal_item.business_name}</a></h3>
+                    <div class="newpro-tj-list-bq">
+                        <em>标签</em>
+                        <span>{$deal_item.tags}</span>
+                    </div>
+                    <p class="newpro-tj-list-jj">
+                       {$deal_item.business_descripe|msubstr=###,0,40}
+                    </p>
+                </div>
+                <div class="newpro-tj-bottom">
+                    <div class="newpro-tj-bottom-code">
+                        ●&nbsp;项目代码：<span class="newpro-tj-bottom-code-con">{$deal_item.daima}</span>
+                    </div>
+                    <div class="newpro-tj-playing">
+                        正在进行中
+                    </div>
+                </div>
+            </div>
+           </foreach>
+        </div>
+       
+        <div class="kong50"></div>
+		<div class="page">{$pages}</div>
+	</section>
+	<div class="kong50"></div>
+<include file="Public:footer" />

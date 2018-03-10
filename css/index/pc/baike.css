@@ -1,0 +1,55 @@
+@charset "utf-8";
+.activeAAA{background:#eee;}
+#neeqWiki{background:#eee;}
+
+.neeqWikiBanner{height:360px; background:url(../img/nqwikibanner.png) no-repeat center;}
+.neeqWikiBannerCon{height:300px; box-sizing:border-box; padding-top:30px;}
+
+.neeqWikiBannerConRight{width:595px; height:300px;}
+.neeqWikiBannerConRight li{width:290px; height:145px; margin:0px 7px 10px 0px\9;}
+.neeqWikiBannerConRight li:nth-child(1){margin:0px 10px 10px 0px;}
+.neeqWikiBannerConRight li:nth-child(2){margin:0px 0px 10px 0px;}
+.neeqWikiBannerConRight li:nth-child(3){margin:0px 10px 0px 0px;}
+.neeqWikiBannerConRight li:nth-child(4){margin:0px 0px 0px 0px;}
+.limeng{width:290px; height:145px; left:0px;top:0px;line-height:145px;}
+.limeng1{background:url(../img/wikicolor1.png);}
+.limeng2{background:url(../img/wikicolor2.png);}
+.limeng3{background:url(../img/wikicolor3.png);}
+.limeng4{background:url(../img/wikicolor4.png);}
+
+.neeqWikiTit{height:26px; border-left:2px solid #bb3333; padding-left:15px; box-sizing:border-box; line-height:26px;}
+.neeqWikiTit span{margin-left:20px;}
+
+
+.neeqWikiConLeft{width:300px; box-sizing:border-box;}
+.neeqWikiConLeft h3{height:50px; padding-left:35px; line-height:50px; border-bottom:1px solid #f6f6f6;}
+
+.neeqWikiFirst{box-sizing:border-box;}
+
+.neeqWikiSecond{border-bottom:1px solid #f6f6f6;}
+.neeqWikiSecondA{background:url(../img/wikitb.png) no-repeat 0px 0px; padding-left:50px; height:50px; line-height:50px; color:#444;}
+.neeqWikiSecond a:hover{text-decoration:none;}
+ 
+.neeqWikiThirdList{padding-left:53px; height:32px; line-height:32px; padding-bottom:5px;}
+.neeqWikiThirdList span{width:20px; height:34px; left:33px; top:-15px;display:block; border-width:0px 0px 1px 1px; border-style:dashed; border-color:#999;}
+.neeqWikiThirdA{padding:3px; color:#666;}
+
+
+.neeqWikiConRight{width:820px; box-sizing:border-box; padding:20px 25px; max-height:1080px; overflow:scroll;}
+.neeqWikiConRightList{height:130px; overflow:hidden; margin-bottom:20px;}
+.neeqWikiConRightList p{text-indent:2em; margin-top:15px;}
+.neeqWikiConRightList h3 a{color:#bb3333;}
+.neeqWikiConRightListGI{padding:2px 8px; background:#bb3333; border-radius:4px; right:8px; bottom:0px;}
+.neeqWikiConRightListGI:hover{text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+

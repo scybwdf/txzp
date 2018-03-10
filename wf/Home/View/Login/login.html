@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>会员登录</title>
+    <meta name="keywords" content="会员登录">
+    <meta name="description" content="会员登录">
+    <?php 
+   		$pagecss[]= "./css/index/login.min.css";
+   		//$pagecss[]= "./css/index/style.min.css";
+		$pagecss[]= "./css/common/bootstrap.min.css";
+  	 	$pagejs[]="./js/common/jquery-1.12.2.js";
+  	 	$cpagejs[]="./js/common/jquery-1.12.2.js";
+  	 	$pagejs[]="./js/common/jquery.validate.min.js";
+  	 	$cpagejs[]="./js/common/jquery.validate.min.js";
+  	 	$pagejs[]="./js/common/messages_zh.min.js";
+  	 	$cpagejs[]="./js/common/messages_zh.min.js";
+  	 	$pagejs[]="./js/index/login.js";
+  	 	$cpagejs[]="./js/index/login.js";	
+   	 ?>
+   
+    
+    <link href="{:parse_css($pagecss)}" rel="stylesheet">
+  
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>
+        if(window.top!==window.self){window.top.location=window.location};
+    </script>
+
+</head>
+
+<body class="signin">
+    <div class="signinpanel">
+        <div class="row">
+            <div class="col-sm-5">
+                <form method="post" action="" name="login">
+                    <h4 class="no-margins">会员登录电脑端</h4>
+					<div class="form-group">
+                    <input type="text" name="account" class="form-control uname" placeholder="用户名" />
+					</div>
+					<div class="form-group">
+                    <input type="password" name="password" class="form-control pword m-b" placeholder="密码" />
+					</div>
+					<div class="form-group">
+					<input type="checkbox" name="auto"><span style="padding-left:10px;">下次自动登陆</span>
+					</div>
+                    <a href="#">忘记密码了？</a> <strong>还没有账号？ <a href="{:U('Login/register')}">立即注册&raquo;</a></strong>
+                    <button type="submit" class="btn btn-success btn-block">登录</button>
+                </form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+               悦无限
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="{:parse_script($pagejs,$cpagejs)}"></script>
+</html>

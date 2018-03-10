@@ -1,0 +1,11 @@
+@charset "utf-8";
+body{background:#f2f2f2;}
+.nimabi_video{padding:0 0 0.8rem; box-sizing:border-box; -webkit-box-sizing:border-box;}
+.nimabi_video_top{margin-bottom:0.6rem;}
+
+.video_list{background:#fff; padding:0 1.5% 0.2rem; margin-bottom:0.5rem; border-top:0.1rem solid #ddd; border-bottom:0.1rem solid #ddd;}
+.video_list:nth-child(1){margin-top:0.5rem;}
+.video_name{padding:0.5rem 0;}
+.video_title{line-height:1.8rem; font-size:1.2rem; color:#222; margin-bottom:0.2rem;}
+.video_look{float:left;height:1rem; line-height:1rem; background:url(../img/video_eyes.png) no-repeat left center; background-size:1.2rem 1.2rem; padding-left:1.4rem; color:#777; margin:0 1.5rem 0 0rem;}
+.video_time{float:left; font-size:1rem; height:1rem; line-height:1rem; color:#777;}

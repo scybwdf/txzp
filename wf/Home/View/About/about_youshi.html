@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于我们</title>
+<?php 
+	$pagecss[]= WEB_ROOT."/css/index/pc/common.css";
+   	$pagecss[]= WEB_ROOT."/css/index/pc/about.css";
+   	$pagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+  	$cpagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+?>
+ <link href="{:parse_css($pagecss,pc)}" rel="stylesheet">
+ <script type="text/javascript" src="{:parse_script($pagejs,$cpagejs,pc)}"></script>
+</head>
+
+<body>
+<section class="w100 about">
+		<div class="about_nav w100">
+		<div class="about_nav_con w1200">
+			<h1 class="fl"><a class="dis-blo" href="##"><img class="dis-blo" src="../img/pc/about/about_logo.png" alt=""></a></h1>
+			<div class="about_nav_item fr">
+				<ul class="clearfix">
+					<li class="about_nav_list"><a href="{:U('About/index')}">公司介绍</a></li>
+					<li class="about_nav_list  about_active"><a href="{:U('About/connect')}">联系我们</a></li>
+					<li class="about_nav_list"><a href="{:U('Index/index')}">返回首页&gt;</a></li>
+				</ul>
+				<div class="heng"></div>
+			</div>
+		</div>
+	</div>
+	<div class="about_main w100">
+		<div class="about_con w1200">
+			<div class="about_you">
+				<img class="dis-blo ma" src="../img/pc/about/about_you.png" alt="">
+				<img class="dis-non xian_zhe xian_zhe1" src="../img/pc/about/zhe1.png" alt="">
+				<img class="dis-non xian_zhe xian_zhe2" src="../img/pc/about/zhe2.png" alt="">
+				<img class="dis-non xian_zhe xian_zhe3" src="../img/pc/about/zhe3.png" alt="">
+				<img class="dis-non xian_zhe xian_zhe4" src="../img/pc/about/zhe4.png" alt="">
+				<div class="zhe_txt zhe_txt1 dis-non">
+					<div class="navcol f32">速度优势</div>
+					<div class="kong10"></div>
+					<div class="colccc f18 line26">掌握最新市场行情，引领行业前沿</div>
+				</div>
+				<div class="zhe_txt zhe_txt2 dis-non">
+					<div class="navcol f32">机动优势</div>
+					<div class="kong10"></div>
+					<div class="colccc f18 line26">多样化资产配置，灵活操控</div>
+				</div>
+				<div class="zhe_txt zhe_txt3 dis-non">
+					<div class="navcol f32">聚焦优势</div>
+					<div class="kong10"></div>
+					<div class="colccc f18 line26">实施把控行业动态，聚焦热点资讯</div>
+				</div>
+				<div class="zhe_txt zhe_txt4 dis-non">
+					<div class="navcol f32">成本优势</div>
+					<div class="kong10"></div>
+					<div class="colccc f18 line26">一站式金融服务链，低成本化理财</div>
+				</div>
+			</div>
+		</div>
+		<div class="kong40"></div>
+		<ul class="nav_nav clearfix w1200">
+			<li><a href="{:U('About/index')}">我们是谁</a></li>
+			<li class="active"><a style="background:url(../img/pc/about/nav_22.png) no-repeat center top;" href="{:U('About/youshi')}">竞争优势</a></li>
+			<li><a href="{:U('About/licheng')}">发展历程</a></li>
+		</ul>
+	</div>
+	<div class="about_footer w100">Copyright&nbsp;&nbsp;©-投资达克版权所有 沪ICP备16034773号-1</div>
+</section>
+</body>
+<script type="text/javascript">
+	$(function(){
+		function navAbout(){
+			var liWidth = $(".about_nav_list").width();
+			var activeIndex = $(".about_active").index();
+			var hengOffset = activeIndex*liWidth+10;
+			$(".about_nav_list").hover(function(){
+				var liIndex = $(this).index();
+				var offset = liWidth*liIndex+10;
+				$(".heng").css("left",offset);
+			},function(){
+				$(".heng").css("left",hengOffset);
+			});
+		};
+		navAbout();
+		function zheXian(){
+			$(".xian_zhe").show(800);
+		};
+		zheXian();
+		setTimeout(function(){
+			$(".zhe_txt").show();
+		},800);
+	})
+</script>
+</html>

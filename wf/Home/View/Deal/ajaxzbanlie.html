@@ -1,0 +1,30 @@
+  <foreach name="zbanlie" item="zbanlie_item">
+                <li>
+                   <a class="dis-blo" href="{:U('Article/inside',array('id'=>$zbanlie_item['id']))}"> <h4>{$zbanlie_item.gsname}</h4></a>
+                    <div class="xsbzbanliebotbrief">
+                        <div class="fl">
+                            <span>企业简介:</span>
+                            <em>{$zbanlie_item.gsjianname}</em>
+                        </div>
+                        <div class="fr">
+                            <span>证券代码:</span>
+                            <em>{$zbanlie_item.zqdaima}</em>
+                        </div>
+                    </div>
+                    <div class="xsbzbanliebotjg clearfix">
+                        <div class="fl xsbzbanliebotxsb">
+                            <span>新三板</span><br/>
+                            <em>({$zbanlie_item.startgj}元/股)</em>
+                        </div>
+                        <div class="fl xsbzbanliebotbs p-rel">
+                           <span class="p-abs">{$zbanlie_item.szbeishu}倍</span>
+                            <div class="p-abs xsbzbanliebotbsdiv1"></div>
+                            <div  class="p-abs xsbzbanliebotbsdiv2"></div>
+                        </div>
+                        <div class="fr xsbzbanliebotzb">
+                            <span>{$zbanlie_item.zbfangxiang}</span><br/>
+                            <em>({$zbanlie_item.endgj}元/股)</em>
+                        </div>
+                    </div>
+                </li>
+				</foreach>

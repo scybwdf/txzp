@@ -1,0 +1,365 @@
+<include file="Public:header" />
+<div class="kong30"></div>
+<!--项目简介 begin-->
+	<section class="w1200 item clearfix">
+		<div class="item_left fl">
+			<img src="{$dealin.image}" width="760" height="400" alt="">
+		</div>
+		<div class="item_right fl">
+			<h3 class="f24 w100">{$dealin.business_name}</h3>
+			<div class="kong20"></div>
+			<div class="item_right_add">
+				<div class="item_right_add_left">
+					<em>{$dealin.tags}</em>
+				</div>
+				<div class="item_right_add_right">
+					<span>{$dealin.province}{$dealin.city}</span>
+				</div>
+			</div>
+			<div class="kong20"></div>
+			<div class="item_right_des p-rel">
+				<div class="item_des_tit">基本概况</div>
+				<p>{$dealin.business_descripe|msubstr=###,0,60}</p>
+				<a href="#more" class="item_des_link p-abs">更多&gt;&gt;</a>
+				<div class="item_right_yy" onclick="$.order();">立即预约</div>
+			</div>
+			<div class="kong30"></div>
+			<div class="item_right_code">
+				<div class="fl f18 col222">•&nbsp;项目代码：{$dealin.daima}</div>
+				<div class="item_right_ing fl">正在进行中</div>
+			</div>
+		</div>
+	</section>
+<!--项目简介 end-->
+	<div class="kong30"></div>
+<!--认购流程 begin-->
+	<section class="pmDri w1200 clearfix">
+        <div class="pmDriLeft">
+            <div class="pmDriLeftCon f18 colfff">
+                咨询认购流程
+            </div>
+        </div>
+        <div class="kong10"></div>
+        <div class="pmDriRight">
+            <ul class="pmDriRightCon clearfix">
+                <li class="pmDriRightConList pmDriRightConList1">
+                    <div class="pmDriRightConList_top">
+                        <i>1</i>
+                        <em>准备事项</em>
+                    </div>
+                    <div class="pmDriRightConList_txt clearfix">
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>合格投资者须知</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>风险提示</em>
+                        </div>
+                    </div>
+                </li>
+                <li class="pmDriRightConList pmDriRightConList2">
+                    <div class="pmDriRightConList_top">
+                        <i>2</i>
+                        <em>项目精选</em>
+                    </div>
+                    <div class="pmDriRightConList_txt clearfix">
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>同行业竞争优势</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>企业规模及实力</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>净利润增长</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>负债率</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>市盈率</em>
+                        </div>
+                    </div>
+                </li>
+                <li class="pmDriRightConList pmDriRightConList3">
+                    <div class="pmDriRightConList_top">
+                        <i>3</i>
+                        <em>确定项目及份额</em>
+                    </div>
+                    <div class="pmDriRightConList_txt clearfix">
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>以选定项目为标准</em>
+                        </div>
+                    </div>
+                </li>
+                <li class="pmDriRightConList pmDriRightConList4">
+                    <div class="pmDriRightConList_top">
+                        <i>4</i>
+                        <em>签署协议、达成合作</em>
+                    </div>
+                    <div class="pmDriRightConList_txt clearfix">
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>项目方提供标准合同，详细审<br>阅后签署协议</em>
+                        </div>
+                    </div>
+                </li>
+                <li class="pmDriRightConList pmDriRightConList5">
+                    <div class="pmDriRightConList_top">
+                        <i>5</i>
+                        <em>退出机制</em>
+                    </div>
+                    <div class="pmDriRightConList_txt clearfix">
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>协议转让</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>转板退出</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>并购重组</em>
+                        </div>
+                        <div class="pmDriRightConList_txt_con clearfix">
+                            <span></span>
+                            <em>做市商转让</em>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+<!--认购流程 end-->
+	<div class="kong30"></div>
+<!--主要内容 begin-->
+	<section class="pmContent w1200 clearfix">
+        <section class="pmContentLeft fl">
+        <!--重要提示开始-->
+            <div class="pmContentLeftImp w100">
+                <div class="pmContentLeftImp_title p-rel">
+                    <div class="f20 line32 clearfix pmContentLeftImp_titleCon ma">
+                        <img class="fl" src="__ROOT__/img/pc/deal_in/pmju.png" width="15" alt="">
+                        <span class="fl">重要提示</span>
+                        <img class="fl" src="__ROOT__/img/pc/deal_in/pmju.png" width="15" alt="">
+                    </div>
+                    <div class="xian_yin"></div>
+                </div>
+                <div class="pmContentLeftImp_txt">
+                    <p>
+                        大好财富平台所展示的项目均属于风险投资。大好财富作为第三方股权投资平台辅助企业与投资者，为其所提供的相关资料、文书、金融技术服务均不构成对项目的要约及承诺；所签订的合同协议仅存在于企业方于个人之间，对使用大好财富平台产生的法律后果将由企业方与投资者自行承担。
+                    </p>
+                    <p>
+                    本内容温馨提醒投资者，个人投资者请在做任何理财投资前，考虑理财标的特点以及评估自身可承受风险程度与其他因素，并适当寻求独立的财务及专业意见，根据自身理财目标、理财期限、理财经验、资产状况等作出合理判断。
+                    </p>
+                </div>
+            </div>
+        <!--重要提示结束-->
+            <div class="kong30"></div>
+        <!--主要内容项目介绍开始-->
+            <section class="pmContentLeftdes">
+               <a name="more"></a>
+                <div class="pmContentLeftdes_title f20 colfff">项目信息</div>
+                <div class="pmContentLeftdes_con">
+                    <table cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr class="tabletr">
+                                <td class="tabletdbb colfff f14">企业名称</td>
+                                <td class="tabletdff col666 f14">{$dealin.business_name}</td>
+                                <td class="tabletdbb colfff f14">企业简称</td>
+                                <td class="tabletdff col666 f14">{$dealin.jianname}</td>
+                            </tr>
+                            <tr class="tabletr">
+                                <td class="tabletdbb colfff f14">地址区域</td>
+                                <td class="tabletdff col666 f14">{$dealin.province}{$dealin.city}</td>
+                                <td class="tabletdbb colfff f14">法人代表</td>
+                                <td class="tabletdff col666 f14">樊海彬</td>
+                            </tr>
+                            <tr class="tabletr">
+                                <td class="tabletdbb colfff f14">证券代码</td>
+                                <td class="tabletdff col666 f14">{$dealin.zqdaima}</td>
+                                <td class="tabletdbb colfff f14">总 股 本</td>
+                                <td class="tabletdff col666 f14">{$dealin.guben}</td>
+                            </tr>
+                            <tr class="tabletr">
+                                <td class="tabletdbb colfff f14">所属行业</td>
+                                <td class="tabletdff col666 f14">{$dealin.tags}</td>
+                                <td class="tabletdbb colfff f14">分层方案</td>
+                                <td class="tabletdff col666 f14">{$dealin.fcfangan}</td>
+                            </tr>
+                            <tr class="tabletr">
+                                <td class="tabletdbb colfff f14">辅导券商</td>
+                                <td class="tabletdff col666 f14">{$dealin.fdquanshang}</td>
+                                <td class="tabletdbb colfff f14">转让方式</td>
+                                <td class="tabletdff col666 f14">{$dealin.zrfangshi}</td>
+                            </tr>
+                            <tr class="tabletr">
+                                <td class="tabletdbb colfff f14">企业简介</td>
+                                <td class="tabletdnot col666 f14" colspan="3">{$dealin.business_descripe}</td>
+                            </tr>
+                            <tr class="tabletr">
+                                <td class="tabletdbb colfff f14">优势亮点</td>
+                                <td class="tabletdnot col666 f14" colspan="3">
+                                    {$dealin.item_good}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="kong30"></div>
+                <!--视频开始-->
+               
+                
+                  <if condition="$dealin.vedio neq ''">
+				<div id="player"  class="video_port pmContentLeftdes_con_video" style="width:760px;height:460px;">
+					<script>
+				var player=new CloudVodPlayer();	player.init({uu:"ifpw55qjou",vu:"{$dealin.vedio}",controls:1,posterType:3,autoSize:1,skinnable:1,changeParent:0,playsinline:1,dfull:0,auto_play:0});		
+					</script>
+			    </div>
+                 <else />
+            	<div id="player" class="video_port pmContentLeftdes_con_video" style="width:760px;height:460px;">
+					<script>
+				var player=new CloudVodPlayer();	player.init({uu:"ifpw55qjou",vu:"5fe8f2430d",controls:1,posterType:3,autoSize:1,skinnable:1,changeParent:0,playsinline:1,dfull:0,auto_play:0});		
+					</script>
+			    </div>
+                  </if>
+                
+           
+             
+                <!--视频结束-->
+                <div class="kong30"></div>
+               
+                </div>
+            </section>
+        <!--主要内容项目介绍结束-->
+        </section>
+        <section class="pmContentRight fr">
+            <!--新三板常见问题 begin-->
+            <div class="pminsetTopRight_top w100">
+                <a class="pminsetTopRight_top_title dis-blo">
+                    <div class="pminsetTopRight_top_title_left fl f18 colfff">常见新三板问题</div>
+                    <div class="pminsetTopRight_top_title_right f34 colfff fr">&gt;</div>
+                </a>
+                <ul class="pminsetTopRight_top_list">
+                    <li>
+                        <span class="fl">概念</span>
+                        <a class="fl" href="{:U('Deal/qaneeq#neeq01')}">新三板是什么？</a>
+                    </li>
+                    <li>
+                        <span class="fl">分层</span>
+                        <a class="fl" href="{:U('Deal/qaneeq#neeq08')}">新三板企业分层标准是什么？</a>
+                    </li>
+                    <li>
+                        <span class="fl">交易</span>
+                        <a class="fl" href="{:U('Deal/qaneeq#neeq05')}">新三板如何交易？</a>
+                    </li>
+                    <li>
+                        <span class="fl">开户</span>
+                        <a class="fl" href="{:U('Deal/qaneeq#neeq04')}">新三板账户怎么开？</a>
+                    </li>
+                    <li>
+                        <span class="fl">转板</span>
+                        <a class="fl" href="{:U('Deal/qaneeq#neeq07')}">新三板转板成功的有哪些企业？</a>
+                    </li>
+                </ul>
+            </div>
+            <!--新三板常见问题 end-->
+            <div class="kong30"></div>
+            <!--转板案例开始-->
+            <div class="xsbzbanlie">
+                <div class="xsbzbanlietop">
+                    <h3 class="fl">转板案例</h3>
+                    <div class="fr">
+                        <a class="xsbzbanlietopprev" href="javascript:;">&lt;</a>
+                        <input class="zbprev" type="hidden" value="{$zbprev}">
+						<input class="zbnext" type="hidden" value="{$zbnext}">
+                        <a class="xsbzbanlietopnext" href="javascript:;">&gt;</a>
+                    </div>
+                </div>
+                <div class="xsbzbanliebot">
+            <ul>
+               <foreach name="zbanlie" item="zbanlie_item">
+                <li>
+                   <a class="dis-blo" href="{:U('Article/inside',array('id'=>$zbanlie_item['id']))}"> <h4>{$zbanlie_item.gsname}</h4></a>
+                    <div class="xsbzbanliebotbrief">
+                        <div class="fl">
+                            <span>企业简介:</span>
+                            <em>{$zbanlie_item.gsjianname}</em>
+                        </div>
+                        <div class="fr">
+                            <span>证券代码:</span>
+                            <em>{$zbanlie_item.zqdaima}</em>
+                        </div>
+                    </div>
+                    <div class="xsbzbanliebotjg clearfix">
+                        <div class="fl xsbzbanliebotxsb">
+                            <span>新三板</span><br/>
+                            <em>({$zbanlie_item.startgj}元/股)</em>
+                        </div>
+                        <div class="fl xsbzbanliebotbs p-rel">
+                           <span class="p-abs">{$zbanlie_item.szbeishu}倍</span>
+                            <div class="p-abs xsbzbanliebotbsdiv1"></div>
+                            <div  class="p-abs xsbzbanliebotbsdiv2"></div>
+                        </div>
+                        <div class="fr xsbzbanliebotzb">
+                            <span>{$zbanlie_item.zbfangxiang}</span><br/>
+                            <em>({$zbanlie_item.endgj}元/股)</em>
+                        </div>
+                    </div>
+                </li>
+				</foreach>
+            </ul>
+        </div>
+            </div>
+            <!--转板案例结束-->
+            <div class="kong30"></div>
+            <!--热门排行开始-->
+            <div class="xsbinarticlehot">
+                <div class="xsbinarticlehottop">
+                    <h3 class="fl">热门资讯</h3>
+                    <span class="fr">&gt;</span>
+                </div>
+                <div class="xsbinarticlehotbot">
+                    <ul class="clearfix">
+                       <foreach name="article" item="article_item" key="key">
+                        <li class="clearfix">
+                            <span class="fl">{$key}</span>
+                            <a class="fl thidden" href="{:U('Article/inside',array('id'=>$article_item['id']))}">{$article_item.title}</a>
+                        </li>
+                      </foreach>
+                    </ul>
+                </div>
+            </div>
+            <!--热门排行结束-->
+            <div class="kong30"></div>
+        </section>
+    </section>
+	<!--主要内容 end-->
+	<div class="kong30"></div>
+ 			<!--项目详细图开始-->
+                    <div class="pmContentLeftdes_con_img w1200">
+                       {$dealin.description_2|imgqudian=###}
+                    </div>
+                <!--项目详细图结束-->
+	<div class="kong30"></div>
+<!--推荐项目 begin-->
+	<section class="tui w1200">
+		<a class="pminsetTopRight_top_title dis-blo">
+			<div class="pminsetTopRight_top_title_left fl f18 colfff">推荐项目</div>
+			<div class="pminsetTopRight_top_title_right f34 colfff fr">&gt;</div>
+		</a>
+		<ul class="tui_con clearfix">
+		<foreach name="tuijian" item="tuijian_item">
+			<li><a href="{:U('Deal/inside',array('id'=>$tuijian_item['id']))}"><img width="360" height="220" src="{$tuijian_item.image}" alt=""></a></li>
+		</foreach>
+		</ul>
+	</section>
+<!--推荐项目 end-->
+
+<include file="Public:footer" />

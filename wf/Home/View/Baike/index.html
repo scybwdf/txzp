@@ -1,0 +1,104 @@
+<include file="Public:header" />
+    <div id="neeqWiki" class="wfull">
+        <div class="neeqWikiBanner wfull">
+            <div class="neeqWikiBannerCon w1200">
+                <a class="fl" href="{:U('deal/inside')}"><img class="dis-blo" src="../img/pc/baikeleft.png" width="595" height="300" alt=""></a>
+                <ul class="neeqWikiBannerConRight fr">
+                    <li class="fl p-rel">
+                        <a class="dis-blo" href="##"><img class="dis-blo" src="../img/pc/nqwikibannerright1.jpg" width="290" height="145" alt=""></a>
+                        <div class="limeng limeng1 p-abs colfff talign f32">新三板是什么</div>
+                    </li>
+                    <li class="fl p-rel">
+                        <a class="dis-blo" href="##"><img class="dis-blo" src="../img/pc/nqwikibannerright2.jpg" width="290" height="145" alt=""></a>
+                        <div class="limeng limeng2 p-abs colfff talign f32">新三板常见问题</div>
+                    </li>
+                    <li class="fl p-rel">
+                        <a class="dis-blo" href="##"><img class="dis-blo" src="../img/pc/nqwikibannerright3.jpg" width="290" height="145" alt=""></a>
+                        <div class="limeng limeng3 p-abs colfff talign f32">新三板怎么选</div>
+                    </li>
+                    <li class="fl p-rel">
+                        <a class="dis-blo" href="##"><img class="dis-blo" src="../img/pc/nqwikibannerright4.jpg" width="290" height="145" alt=""></a>
+                        <div class="limeng limeng4 p-abs colfff talign f32">新三板上市条件</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wfull">
+            <div class="kong30"></div>
+            <div class="neeqWikiTit w1200">
+                <h2 class="fl f20 fweight1">百科知道</h2>
+                <span class="fl f16 col55">你不得不知的新三板十万个为什么</span>
+            </div>
+            <div class="kong30"></div>
+        </div>
+
+        <div class="wfull neeqWiki">
+            <div class="neeqWikiCon clearfix w1200">
+                <div class="neeqWikiConLeft fl baibg">
+                    <h3 class="fweight1 allbk f24 col444 pointer">全部百科</h3>
+                    <ul class="neeqWikiFirst w100">
+                       <foreach name="lefttop_list" item="lefttop_item">
+                        <li class="neeqWikiSecond pointer">
+                            <a class="neeqWikiSecondA dis-blo f20" onClick="$.getlist(this,{$lefttop_item.id}) ">{$lefttop_item.title}</a>
+                            <ol class="neeqWikiThird dis-non">
+                          
+                            </ol>
+                        </li>
+                      </foreach>
+                    </ul>
+                </div>
+                <ul class="neeqWikiConRight fr baibg">
+                    <foreach name="cont['0']" item="cont_item" >
+  					<li class="neeqWikiConRightList w100 p-rel">
+               <h3 class="fweight1"><a class="dis-blo" href="{:U('Article/inside',array('id'=>$cont_item['id']))}">{$cont_item.title}</a></h3>
+                  <p class="f14 col666 line26">{$cont_item.brief|msubstr=###,0,150}</p>
+   				 <a href="{:U('Article/inside',array('id'=>$cont_item['id']))}" class="neeqWikiConRightListGI dis-blo colfff f12 p-abs">阅读</a>
+				</li>
+				</foreach>
+                </ul>
+            </div>
+        </div>
+        <div class="kong60"></div>
+    </div>
+<script type="text/javascript">
+    
+</script>
+<include file="Public:footer" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

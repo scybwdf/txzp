@@ -1,0 +1,88 @@
+<tagLib name="html" />
+<include file = "Common:header" title = "{$title}" />
+<script src="__ROOT__/js/admin/admin.js"></script>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>编辑邮件服务器</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal" role="form" action="{:U('Mailserver/update')}" method="post">
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">SMTP服务器地址:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="smtp_server" required='' value="{$vo.SMTP_SERVER}" type="text" >
+                  		</div>
+                  	</div>
+                 	 	<div class="form-group">
+                  		<label class="control-label col-sm-3">账号:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="smtp_name" required='' value="{$vo.SMTP_NAME}" type="text" >
+                  		</div>
+                  	</div>
+                 	 	<div class="form-group">
+                  		<label class="control-label col-sm-3">密码:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="smtp_pwd" required=''  value="{$vo.SMTP_PWD}"  type="password" >
+                  			<span class="help-block text-info">若为QQ邮箱，请填写授权码</span>
+                  		</div>
+                  	</div>	
+                 	 	<div class="form-group">
+                  		<label class="control-label col-sm-3">是否需要身份验证:</label>
+                  		<div class="col-sm-1">
+                  			 <select name="smtp_auth" class="form-control chosen-select" >
+                                 	<option value="1" <if condition="$vo['SMTP_AUTH'] eq 1 ">selected="selected"</if> >是</option >
+                                   <option value="0"  <if condition="$vo['SMTP_AUTH'] eq 0 ">selected="selected"</if>  >否</option >
+                              </select>
+                  		</div>
+                  		<div class="help-block text-info">默认为“是”</div>
+                  	</div>
+                 	 	<div class="form-group">
+                  		<label class="control-label col-sm-3">端口号:</label>
+                  		<div class="col-sm-5">
+                  			<input class="form-control" name="smtp_port"  type="text" value="{$vo.SMTP_PORT}" >
+                  		</div>
+                  		<div class="help-block text-info">默认为:25</div>
+                  	</div>
+                  	<div class="form-group">
+                  		<label class="control-label col-sm-3">邮件编码</label>
+                  			<div class="col-sm-5">
+                  			<input class="form-control" name="charset"  type="text" value="{$vo.CHARSET}" >
+                  			<div class="help-block text-info">默认为:UTF-8</div>
+                  		</div>
+                  	</div>
+                 	 	<div class="form-group">
+                  		<label class="control-label col-sm-3">是否开启ssl:</label>
+                  		<div class="col-sm-1">
+                  			<select name="secure" class="form-control chosen-select" >
+                  				<option value="1"  <if condition="$vo['SECURE'] eq 1">selected="selected"</if>  >是</option>
+                  				<option value="0"  <if condition="$vo['SECURE'] eq 0">selected="selected"</if>  >否</option>
+                  			</select>
+                  		</div>
+                  		<div class="help-block text-info">若开启则需要打开openssl</div>
+                  	</div>						
+                  	<div class="form-group">
+                  		<div class="col-sm-offset-4 col-xs-offset-2 fl">
+                  			<input type="hidden" name="is_smtp" value='1'>
+                  			<button class="btn btn-primary" type="submit">编辑</button>
+                  		</div>
+                  		<div class="col-sm-2 col-xs-2">
+                  			<button class="btn btn-primary" type="reset">重置</button>
+                  		</div>
+                  	</div>
+                </form> 
+        </div>
+    </div>
+</div>
+</div>
+<!-- 调用脚部文件 -->
+<include file = "Common:footer"  />

@@ -1,0 +1,50 @@
+<include file="Public:header" />
+<script>
+var dealurl="{:U('deal/index')}";
+</script>
+<div class="kong50"></div>
+	<!--路演 begin-->
+	<div class="title w1200">
+    	<em>会议活动</em>
+    	<i></i>
+    </div>
+    <div class="kong30"></div>
+    <section class="w1200 ly">
+    	<ul class="ly_will w100">
+    	<foreach name="start_list" item="start_item">
+    		<li class="clearfix">
+    			<a class="fl" href="{:U('Luyan/inside',array('id'=>$start_item['id']))}"><img class="dis-blo" src="{$start_item.icon1}" width="490" height="270" alt=""></a>
+    			<div class="fl ly_will_txt">
+    				<h3><a href="{:U('Luyan/inside',array('id'=>$start_item['id']))}" class="f22">{$start_item.name}</a></h3>
+    				<div class="kong25"></div>
+    				<div class="f18 col222 line30">时间：{$start_item.time}</div>
+    				<div class="f18 col222 line30">主办单位：{$start_item.danwei}</div>
+    				<div class="f18 col222 line30">路演地点：{$start_item.area}</div>
+    				<div class="f18 col222 line30">活动规模：{$start_item.guimo}</div>
+    				<div class="kong25"></div>
+    				<div class="looks col666">{$start_item.readrow}</div>
+    			</div>
+    			<div class="ly_will_txt_yy" onClick="$.order()">立即预约<i></i></div>
+    		</li>
+    	</foreach>	
+    	</ul>
+    	<ul class="ly_had w100">
+    	<foreach name="end_list" item="end_item">
+    		<li class="clearfix">
+    			<a class="fl" href="{:U('Luyan/inside',array('id'=>$end_item['id']))}"><img class="dis-blo" src="{$end_item.icon1}" width="350" height="200" alt=""></a>
+    			<div class="fl ly_had_txt">
+    				<h3><a href="{:U('Luyan/inside',array('id'=>$end_item['id']))}" class="f22">{$end_item.name}</a></h3>
+    				<div class="kong20"></div>
+    				<div class="f18 col222 fweight6 line30">时间：{$end_item.time}</div>
+    				<div class="f18 col222 fweight6 line30">主办单位：{$end_item.danwei}</div>
+    				<div class="f18 col222 fweight6 line30">路演地点：{$end_item.area}</div>
+    				<div class="f18 col222 fweight6 line30">活动规模：{$end_item.guimo}</div>
+    			</div>
+    			<a href="{$end_item.zixun}" class="ly_will_txt_yy">媒体报道<i></i></a>
+    		</li>
+    	</foreach>	
+    	</ul>
+    </section>
+<!--路演 end-->
+<div class="kong40"></div>
+<include file="Public:footer" />

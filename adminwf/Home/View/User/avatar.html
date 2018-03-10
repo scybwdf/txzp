@@ -1,0 +1,36 @@
+<include file="Common:header" />
+ <script>
+        var ROOT = "__ROOT__";
+        var sid = "{:session_id()}";
+        var uploadUrl = '{:U("User/avatar")}';
+    </script>
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-12">
+                <div class="ibox-title">
+                    <h5>头像上传</h5>
+                    <div class="">
+                        <form action="{:U('editface')}" method='post'>
+                            <div class='edit-face'>
+                                <img src="
+                        <if condition='$user["face180"]'>
+                            {$user.face180}
+                        <else/>
+                            __PUBLIC__/Images/noface.gif
+                        </if>" width='180' height='180' id='face-img' />
+                                <p>
+                                    <input type="file" name='face' id='face' />
+                                </p>
+                                <p>
+                                    <input type="hidden" name='face64' value='{$user.face64}' />
+                                     <input type="hidden" name='face180' value='{$user.face180}' />
+                                    <input type="submit" value='保存修改' class='btn btn-primary' />
+                                </p>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__ROOT__/js/admin/userset.js"></script>
+    <include file="Common:footer" />

@@ -1,0 +1,57 @@
+<include file="Common:header" />
+<script src="__ROOT__/js/admin/admin.js"></script>
+<script src="__ROOT__/js/admin/tablelist.js"></script>
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <button disabled class="btn btn-default">文章分类回收站</button>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row row-lg">
+            <div class="col-sm-12">
+                <!-- Example Events -->
+                <div class="example-wrap">
+
+                    <div class="example">
+                        <div class="btn-group hidden-xs" id="tableToolbar" role="group">
+
+                            <button type="button" class="btn  btn-success restore">
+                               恢复
+                            </button>
+                            <button type="button" class="btn btn-danger redelete">
+                                彻底删除
+                            </button>
+                        </div>
+                        <table id="tablelist" data-url="{:U('trash')}" data-mobile-responsive="true" >
+                            <thead>
+                            <tr>
+                                <th data-checkbox="true"></th>
+                                <th data-field="id" data-sortable="true">ID</th>
+                                <th data-field="title" data-sortable="true">名称</th>
+                                <th data-field="pid" data-sortable="true">所属分类</th>
+                                <th data-field="sort" data-sortable="true">排序</th>
+                                <th data-field="id" data-formatter="$.trashact" >操作</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Common:footer" />

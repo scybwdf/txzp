@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于我们</title>
+<?php 
+	$pagecss[]= WEB_ROOT."/css/index/pc/common.css";
+   	$pagecss[]= WEB_ROOT."/css/index/pc/about.css";
+   	$pagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+  	$cpagejs[]=WEB_ROOT."/js/index/pc/jquery-1.12.2.js";
+?>
+ <link href="{:parse_css($pagecss,pc)}" rel="stylesheet">
+ <script type="text/javascript" src="{:parse_script($pagejs,$cpagejs,pc)}"></script>
+</head>
+
+<body>
+<section class="w100 about">
+	<div class="about_nav w100">
+		<div class="about_nav_con w1200">
+			<h1 class="fl"><a class="dis-blo" href="##"><img class="dis-blo" src="../img/pc/about/about_logo.png" alt=""></a></h1>
+			<div class="about_nav_item fr">
+				<ul class="clearfix">
+					<li class="about_nav_list about_active"><a href="{:U('About/index')}">公司介绍</a></li>
+					<li class="about_nav_list"><a href="{:U('About/connect')}">联系我们</a></li>
+					<li class="about_nav_list"><a href="{:U('Index/index')}">返回首页&gt;</a></li>
+				</ul>
+				<div class="heng"></div>
+			</div>
+		</div>
+	</div>
+	<div class="about_main w100">
+		<div class="about_con about_who w1200">
+			<div class="about_hello">尊敬的客户：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好！</div>
+			<div class="about_des">
+				<div class="about_txt f22 line56">投资达客凭借专业优势及良好口碑荣获</div>
+				<div class="about_txt f36 line56">“金融诚信服务商”、“互联网行业领先企业”</div>
+				<div class="about_txt f22 line56">等多种奖项成为国内互联网金融行业领跑者。</div>
+			</div>
+			<div class="about_article">
+				投资达客位于上海金融中心，旗下新三板信息服务平台拥有国内最专业的投研人员和精选三板优质项目。致力于服务中国高净值个人及机构投资者，基于海量金融数据库，并借助互联网科技的前沿技术，为广大客户提供一站式的资产配置与财富管理服务。汇集金融产品高端资源，核心投研人员均为行业资深人士，五重风控体系为甄选最优质的金融产品。
+			</div>
+		</div>
+		<div class="kong40"></div>
+		<ul class="nav_nav clearfix w1200">
+			<li class="active"><a style="background:url(../img/pc/about/nav_11.png) no-repeat center top;" href="{:U('About/index')}">我们是谁</a></li>
+			<li><a href="{:U('About/youshi')}">竞争优势</a></li>
+			<li><a href="{:U('About/licheng')}">发展历程</a></li>
+		</ul>
+	</div>
+	<div class="about_footer w100">Copyright&nbsp;&nbsp;©-投资达克版权所有 沪ICP备16034773号-1</div>
+</section>
+</body>
+<script type="text/javascript">
+	$(function(){
+		var liWidth = $(".about_nav_list").width();
+		var activeIndex = $(".about_active").index();
+		var hengOffset = activeIndex*liWidth+10;
+		
+		
+		$(".about_nav_list").hover(function(){
+			var liIndex = $(this).index();
+			var offset = liWidth*liIndex+10;
+			$(".heng").css("left",offset);
+		},function(){
+			$(".heng").css("left",hengOffset);
+		});
+	})
+</script>
+</html>

@@ -1,0 +1,170 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+body{color:#222;font-family:'微软雅黑';}
+i,em{ font-style:normal;}
+img{border:0 none;}
+li{ list-style:none;}
+a{ text-decoration:none; color:#000;}
+a:hover{ text-decoration:underline;}
+
+/*清浮动*/
+.clearfix {zoom:1;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+/*鼠标样式*/
+.pointer{cursor:pointer;}
+.notallow{cursor:not-allowed;}
+
+/*左右浮动*/
+.fl{float:left;}
+.fr{float:right;}
+
+/*文字对齐样式*/
+.talign{text-align:center;}
+.ralign{text-align:right;}
+
+/*全屏和1200px和100的宽样式*/
+.w100{width:100%;}
+.wfull{width:100%; min-width:1200px;}
+.w1200{width:1200px; margin:0 auto;}
+.ma{margin:0 auto;}
+
+
+/*文本隐藏*/
+.thidden{overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+
+/*页面主要的背景颜色*/
+.mainbg{background:#bb3333;}
+.redbg{background:#f00;}
+.baibg{background:#fff;}
+.bgf2{background:#f2f2f2;}
+.bgf3{background:#f3f3f3;}
+.bgf4{background:#f4f4f4;}
+.bgf5{background:#f5f5f5;}
+.bgf6{background:#f6f6f6;}
+.bgf9{background:#f9f9f9;}
+.bgfd{background:#fdfdfd;}
+
+
+/*页面主要的字体颜色*/
+.maincolor{color:#bb3333;}
+.colfff{color:#fff;}
+.col222{color:#222;}
+.col333{color:#333;}
+.col444{color:#444;}
+.col555{color:#555;}
+.col666{color:#666;}
+.col777{color:#777;}
+.col888{color:#888;}
+.col999{color:#999;}
+.colccc{color:#ccc;}
+.coleee{color:#eee;}
+.cole1e{color:#e1e1e1;}
+.cole2e{color:#e2e2e2;}
+.cole3e{color:#e3e3e3;}
+.cole6e{color:#e6e6e6}
+.colred{color:red;}
+.colde{color:#dedede;}
+.colddd{color:#ddd;}
+.colc0c{color:#c0c0c0;}
+.col50{color:#505050;}
+
+/*页面主要的字体大小*/
+.f12{font-size:12px;}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f15{font-size:15px;}
+.f16{font-size:16px;}
+.f17{font-size:17px;}
+.f18{font-size:18px;}
+.f19{font-size:19px;}
+.f20{font-size:20px;}
+.f21{font-size:21px;}
+.f22{font-size:22px;}
+.f23{font-size:23px;}
+.f24{font-size:24px;}
+.f25{font-size:25px;}
+.f26{font-size:26px;}
+.f27{font-size:27px;}
+.f28{font-size:28px;}
+.f29{font-size:29px;}
+.f30{font-size:30px;}
+.f31{font-size:31px;}
+.f32{font-size:32px;}
+.f33{font-size:33px;}
+.f34{font-size:34px;}
+.f35{font-size:35px;}
+.f36{font-size:36px;}
+.f37{font-size:37px;}
+.f38{font-size:38px;}
+.f39{font-size:39px;}
+.f40{font-size:40px;}
+
+
+/*常见的行高*/
+.line18{line-height:18px;}
+.line20{line-height:20px;}
+.line22{line-height:22px;}
+.line24{line-height:24px;}
+.line26{line-height:26px;}
+.line28{line-height:28px;}
+.line30{line-height:30px;}
+.line32{line-height:32px;}
+.line34{line-height:34px;}
+.line36{line-height:36px;}
+.line38{line-height:38px;}
+.line40{line-height:40px;}
+.line42{line-height:42px;}
+.line44{line-height:44px;}
+.line46{line-height:46px;}
+.line48{line-height:48px;}
+.line50{line-height:50px;}
+.line52{line-height:52px;}
+.line54{line-height:54px;}
+.line56{line-height:56px;}
+
+/*字体加粗状况*/
+.fweight6{font-weight:600;}
+.fweight1{font-weight:100;}
+
+/*字体间距*/
+.lspace1{letter-spacing:1px;}
+.lspace2{letter-spacing:2px;}
+.lspace3{letter-spacing:3px;}
+.lspace4{letter-spacing:4px;}
+.lspace5{letter-spacing:5px;}
+
+/*四种常见的display*/
+.dis-non{display:none;}
+.dis-inl{display:inline;}
+.dis-blo{display:block;}
+.dis-inlblo{display:inline-block;}
+
+/*三种常见的定位*/
+.p-abs{position:absolute;}
+.p-rel{position:relative;}
+.p-fix{position:fixed;}
+
+/*间隔*/
+.kong5{width:100%; height:5px;}
+.kong10{width:100%; height:10px;}
+.kong15{width:100%; height:15px;}
+.kong20{width:100%; height:20px;}
+.kong25{width:100%; height:25px;}
+.kong30{width:100%; height:30px;}
+.kong35{width:100%; height:35px;}
+.kong40{width:100%; height:40px;}
+.kong45{width:100%; height:45px;}
+.kong50{width:100%; height:50px;}
+.kong55{width:100%; height:55px;}
+.kong60{width:100%; height:60px;}
+
+/*线*/
+.xian1{width:100%;height:1px;background:#c9c9c9;}
+.xian2{width:100%;height:2px;background:#c9c9c9;}
+.xian3{width:100%;height:3px;background:#c9c9c9;}
+.xian4{width:100%;height:4px;background:#c9c9c9;}
+.xian5{width:100%;height:5px;background:#c9c9c9;}
+.xuxian1{width:100%;height:1px;border-bottom:1px dashed #c9c9c9;box-sizing:border-box;}
+.xuxian2{width:100%;height:2px;border-bottom:1px dashed #c9c9c9;box-sizing:border-box;}
+
+/*end*/

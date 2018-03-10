@@ -1,0 +1,65 @@
+<include file="Common:header" />
+<script src="__ROOT__/js/admin/admin.js"></script>
+<script src="__ROOT__/js/admin/tablelist.js"></script>
+<div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>管理员列表</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="{:U('add')}">新增管理员</a>
+                        </li>
+                        <li><a href="{:U('Group/add')}">新增管理组</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+            <div class="row row-lg">
+   			 <div class="col-sm-12">
+        <!-- Example Events -->
+        	<div class="example-wrap">
+          
+            <div class="example">
+                <div class="btn-group hidden-xs" id="tableToolbar" role="group">
+                    
+                    <a  href="{:U("add")}" class="btn btn-outline btn-default">
+                        <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+                    </a>
+                   
+                    <button type="button" class="btn btn-outline btn-default">
+                        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-default btndelete">
+                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <table id="tablelist" data-url="{:U('adminlist')}" data-mobile-responsive="true" >
+                <thead>
+                	<tr>
+                		<th data-checkbox="true"></th>
+                		<th data-field="id" data-sortable="true">ID</th>
+                		<th data-field="username" data-sortable="true">用户名</th>
+                		<th data-field="is_effect" data-sortable="true" data-formatter="$.seteffect">是否有效</th>
+                		<th data-field="uid" data-sortable="true">所属管理组</th>
+                		<th data-field="login_time" data-sortable="true">登陆时间</th>
+                		<th data-field="login_ip" data-sortable="true">登陆IP</th>
+                		<th data-field="react" data-formatter="$.setedit" >操作</th>
+                	</tr>
+                </thead>
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+	</div>
+</div>
+<include file="Common:footer" />

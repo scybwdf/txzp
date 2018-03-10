@@ -1,0 +1,80 @@
+<include file="Public:header" />
+	<section class="w100 baibg pides clearfix">
+		<div class="pides_tit">
+			<a href="{:U('Deal/index')}" class="fl back">&lt;</a>
+			<h3 class="fl thidden">{$dealin.business_name}</h3>
+			<a href="{:U('Index/index')}" class="fr back_index">首页&gt;&gt;</a>
+		</div>
+		<img class="dis-blo" src="{$dealin.mobile_img}" width="100%" alt="">
+	</section>
+<!--项目图文介绍结束-->
+	<div class="phkong10"></div>
+<!--项目信息开始-->
+	<section class="pimess baibg">
+		<ul class="clearfix w100">
+			<li class="pimess_list pimess_list1">
+				<span>企业简称：</span>
+				<em>{$dealin.jianname}</em>
+			</li>
+			<li class="pimess_list pimess_list2">
+				<span>地址区域：</span>
+				<em>{$dealin.province}{$dealin.city}</em>
+			</li>
+			<li class="pimess_list pimess_list3">
+				<span>法人代表：</span>
+				<em>{$dealin.frdaibiao}</em>
+			</li>
+			<li class="pimess_list pimess_list4">
+				<span>证券代码：</span>
+				<em>{$dealin.daima}</em>
+			</li>
+			<li class="pimess_list pimess_list5">
+				<span>总&nbsp;&nbsp;股&nbsp;&nbsp;本：</span>
+				<em>{$dealin.guben}</em>
+			</li>
+			<li class="pimess_list pimess_list6">
+				<span>所属行业：</span>
+				<em>{$dealin.tags}</em>
+			</li>
+			<li class="pimess_list pimess_list7">
+				<span>辅导券商：</span>
+				<em>{$dealin.fdquanshang}</em>
+			</li>
+			<li class="pimess_list pimess_list8">
+				<span>转让方式：</span>
+				<em>{$dealin.zrfangshi}</em>
+			</li>
+		</ul>
+		<div class="pidesyy phyuyue">项目预约</div>
+	</section>
+<!--项目信息结束-->
+	<div class="phkong10"></div>
+<!--主要内容开始-->
+
+	<section class="picontent w100 baibg">
+		<div class="picontent_tit">项目信息</div>
+		<div class="phkong08"></div>
+		<if condition="$dealin['vedio'] neq ''" >
+		<div class="pivideo">
+			<div id="player" style="width:100%;">
+			<script>
+				var player=new CloudVodPlayer();	player.init({uu:"ifpw55qjou",vu:"{$dealin['vedio']}",controls:1,posterType:3,autoSize:1,skinnable:1,changeParent:0,playsinline:1,dfull:0});
+			</script>
+			</div>
+		</div>
+		<else />
+		<div class="pivideo">
+			<div id="player" style="width:100%;">
+			<script>
+				var player=new CloudVodPlayer();	player.init({uu:"ifpw55qjou",vu:"5fe8f2430d",controls:1,posterType:3,autoSize:1,skinnable:1,changeParent:0,playsinline:1,dfull:0});
+			</script>
+			</div>
+		</div>
+		</if>
+		<div class="phkong08"></div>
+		<div class="picontent_con">
+			{$dealin.mobile_inside}
+		</div>
+	</section>
+<!--主要内容结束-->
+<include file="Public:footer" />

@@ -1,0 +1,17 @@
+测试域名：www.xisese.com  
+
+首先需要将www.xisese.com “域名重定向”到您的本地站点来做测试。需要修改hosts文件。
+
+具体参考：http://jingyan.baidu.com/article/e73e26c0cca41824adb6a799.html
+
+
+测试商户号：385469
+
+测试PID号：738513346376621
+
+测试KEY码：JHeP76Kzd8aMQv8GZxZ3Gi8NgI2gfgAW
+ 
+ 
+
+
+
